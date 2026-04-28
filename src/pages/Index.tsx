@@ -6,8 +6,6 @@ import {
   ChevronDown,
   Cloud,
   Cpu,
-  GraduationCap,
-  HandHeart,
   Headphones,
   HeartHandshake,
   Laptop,
@@ -20,7 +18,6 @@ import {
   ShieldCheck,
   Sparkles,
   Star,
-  Users,
   Wrench,
 } from "lucide-react";
 import serverRoom from "@/assets/mexaa-server-room.jpg";
