@@ -5,7 +5,16 @@ import { Link } from "react-router-dom";
 import serverRoom from "@/assets/mexaa-server-room.jpg";
 import { PageShell } from "@/components/MexaaLayout";
 
-const pageData = {
+type PageContent = {
+  eyebrow: string;
+  title: string;
+  intro: string;
+  sections: Array<Record<string, any> & { title: string }>;
+  stats?: string[][];
+  table?: string[][];
+};
+
+const pageData: Record<string, PageContent> = {
   "/managed-service": {
     eyebrow: "Managed Service", title: "Managed Services, die Ihre IT dauerhaft stabil halten", intro: "Wir betreiben Ihre IT proaktiv, transparent und mit klaren Service-Leveln – damit Ihr Team arbeiten kann, während wir Risiken früh erkennen und lösen.",
     sections: [
@@ -158,7 +167,7 @@ const ContactPage = () => {
   const submit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const form = new FormData(event.currentTarget);
-    const result = schema.safeParse(Object.fromEntries(form.entries()) | { dsgvo: form.get("dsgvo") === "on" });
+    const result = schema.safeParse({ ...Object.fromEntries(form.entries()), dsgvo: form.get("dsgvo") === "on" });
     if (!result.success) setErrors(Object.fromEntries(result.error.issues.map((i) => [String(i.path[0]), "Bitte prüfen Sie dieses Feld."])));
     else setErrors({});
   };
@@ -169,7 +178,7 @@ const ContactPage = () => {
     </div></section></PageShell>;
 };
 
-export const GenericPage = ({ path }: { path: PageKey }) => {
+export const GenericPage = ({ path }: { path: string }) => {
   const page = pageData[path];
   if (path === "/kontakt") return <ContactPage />;
   return <PageShell><Hero eyebrow={page.eyebrow} title={page.title} intro={page.intro} />
