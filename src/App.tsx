@@ -5,28 +5,25 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import NotFound from "./pages/NotFound.tsx";
-import { GenericPage } from "./pages/ServicePage.tsx";
+import ManagedService from "./pages/subpages/ManagedService";
+import ItOutsourcing from "./pages/subpages/ItOutsourcing";
+import ItServiceSupport from "./pages/subpages/ItServiceSupport";
+import ItRollout from "./pages/subpages/ItRollout";
+import ItBeratung from "./pages/subpages/ItBeratung";
+import Microsoft365 from "./pages/subpages/Microsoft365";
+import AzureInfrastruktur from "./pages/subpages/AzureInfrastruktur";
+import MicrosoftIntune from "./pages/subpages/MicrosoftIntune";
+import ClientManagement from "./pages/subpages/ClientManagement";
+import CloudTelefonie from "./pages/subpages/CloudTelefonie";
+import KiLoesungen from "./pages/subpages/KiLoesungen";
+import WorkshopsSchulungen from "./pages/subpages/WorkshopsSchulungen";
+import UeberUns from "./pages/subpages/UeberUns";
+import Karriere from "./pages/subpages/Karriere";
+import SozialesEngagement from "./pages/subpages/SozialesEngagement";
+import Kontakt from "./pages/subpages/Kontakt";
 
 const queryClient = new QueryClient();
 
-const pageRoutes = [
-  "/managed-service",
-  "/it-outsourcing",
-  "/it-service-support",
-  "/it-rollout",
-  "/it-beratung",
-  "/microsoft-365",
-  "/azure-infrastruktur",
-  "/microsoft-intune",
-  "/client-management",
-  "/cloud-telefonie",
-  "/ki-loesungen",
-  "/workshops-schulungen",
-  "/ueber-uns",
-  "/karriere",
-  "/soziales-engagement",
-  "/kontakt",
-];
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -36,9 +33,22 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          {pageRoutes.map((path) => (
-            <Route key={path} path={path} element={<GenericPage path={path} />} />
-          ))}
+          <Route path="/managed-service" element={<ManagedService />} />
+          <Route path="/it-outsourcing" element={<ItOutsourcing />} />
+          <Route path="/it-service-support" element={<ItServiceSupport />} />
+          <Route path="/it-rollout" element={<ItRollout />} />
+          <Route path="/it-beratung" element={<ItBeratung />} />
+          <Route path="/microsoft-365" element={<Microsoft365 />} />
+          <Route path="/azure-infrastruktur" element={<AzureInfrastruktur />} />
+          <Route path="/microsoft-intune" element={<MicrosoftIntune />} />
+          <Route path="/client-management" element={<ClientManagement />} />
+          <Route path="/cloud-telefonie" element={<CloudTelefonie />} />
+          <Route path="/ki-loesungen" element={<KiLoesungen />} />
+          <Route path="/workshops-schulungen" element={<WorkshopsSchulungen />} />
+          <Route path="/ueber-uns" element={<UeberUns />} />
+          <Route path="/karriere" element={<Karriere />} />
+          <Route path="/soziales-engagement" element={<SozialesEngagement />} />
+          <Route path="/kontakt" element={<Kontakt />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
