@@ -72,6 +72,7 @@ export default {
       backgroundImage: {
         "hero-radial": "var(--gradient-hero-radial)",
         "section-glow": "var(--gradient-section-glow)",
+        "readable-hero": "var(--gradient-readable-hero)",
       },
       boxShadow: {
         glass: "var(--shadow-glass)",
