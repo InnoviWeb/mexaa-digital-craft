@@ -127,7 +127,7 @@ type PageKey = keyof typeof pageData;
 const Hero = ({ eyebrow, title, intro }: { eyebrow: string; title: string; intro: string }) => (
   <section className="relative overflow-hidden bg-hero px-6 pt-36 text-hero-foreground">
     <img src={serverRoom} alt="Professionelle IT-Infrastruktur im Rechenzentrum" width={1920} height={1088} className="absolute inset-0 h-full w-full object-cover" />
-    <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(10,22,40,0.95)_0%,rgba(10,22,40,0.7)_60%,rgba(10,22,40,0.3)_100%)]" />
+    <div className="absolute inset-0 bg-readable-hero" />
     <div className="relative mx-auto max-w-[1200px] py-[100px]">
       <div className="max-w-3xl animate-fade-up">
         <div className="mb-6 inline-flex items-center gap-3 rounded-md border border-primary-foreground/20 bg-primary-foreground/10 px-4 py-2 text-sm font-extrabold backdrop-blur-xl"><Sparkles className="h-4 w-4 text-accent" /> {eyebrow}</div>

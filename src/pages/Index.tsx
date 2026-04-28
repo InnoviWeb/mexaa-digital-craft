@@ -46,7 +46,7 @@ const Index = () => (
 
     <section id="home" className="relative min-h-screen overflow-hidden bg-hero text-hero-foreground">
       <img src={serverRoom} alt="Moderner Serverraum als Symbol für sichere IT-Infrastruktur" width={1920} height={1088} className="absolute inset-0 h-full w-full object-cover" />
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(10,22,40,0.95)_0%,rgba(10,22,40,0.7)_60%,rgba(10,22,40,0.3)_100%)]" />
+      <div className="absolute inset-0 bg-readable-hero" />
       <ParticleNetwork />
       <div className="relative z-10 mx-auto grid min-h-screen max-w-[1200px] items-center gap-12 px-6 pb-20 pt-28 lg:grid-cols-[55fr_45fr]">
         <div className="max-w-3xl text-left section-reveal">
