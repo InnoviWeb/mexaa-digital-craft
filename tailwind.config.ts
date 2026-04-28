@@ -67,10 +67,12 @@ export default {
         glass: "hsl(var(--glass))",
         trust: "hsl(var(--trust))",
         footer: "hsl(var(--footer))",
+        "section-title": "hsl(var(--section-title))",
       },
       backgroundImage: {
         "hero-radial": "var(--gradient-hero-radial)",
         "section-glow": "var(--gradient-section-glow)",
+        "readable-hero": "var(--gradient-readable-hero)",
       },
       boxShadow: {
         glass: "var(--shadow-glass)",
