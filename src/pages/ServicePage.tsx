@@ -1,5 +1,5 @@
 import { ArrowRight, CheckCircle2, Clock, Mail, ShieldCheck, Sparkles } from "lucide-react";
-import { useState } from "react";
+import { type FormEvent, useState } from "react";
 import { z } from "zod";
 import { Link } from "react-router-dom";
 import serverRoom from "@/assets/mexaa-server-room.jpg";
@@ -164,7 +164,7 @@ const ContentSection = ({ section }: { section: any }) => (
 const ContactPage = () => {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const schema = z.object({ name: z.string().trim().min(2).max(100), firma: z.string().trim().max(100), email: z.string().trim().email().max(255), telefon: z.string().trim().max(40), betreff: z.string().trim().min(1), nachricht: z.string().trim().min(10).max(1000), dsgvo: z.literal(true) });
-  const submit = (event: React.FormEvent<HTMLFormElement>) => {
+  const submit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const form = new FormData(event.currentTarget);
     const result = schema.safeParse({ ...Object.fromEntries(form.entries()), dsgvo: form.get("dsgvo") === "on" });
@@ -179,8 +179,8 @@ const ContactPage = () => {
 };
 
 export const GenericPage = ({ path }: { path: string }) => {
-  const page = pageData[path];
   if (path === "/kontakt") return <ContactPage />;
+  const page = pageData[path] ?? pageData["/managed-service"];
   return <PageShell><Hero eyebrow={page.eyebrow} title={page.title} intro={page.intro} />
     {page.stats && <section className="bg-hero px-6 py-[100px] text-hero-foreground"><div className="mx-auto grid max-w-[1200px] gap-6 text-center sm:grid-cols-2 lg:grid-cols-4">{page.stats.map(([n,l]) => <div key={l} className="rounded-md border border-primary-foreground/10 bg-primary-foreground/10 p-7 backdrop-blur"><div className="text-5xl font-black text-primary">{n}</div><div className="mt-3 font-bold text-hero-foreground/70">{l}</div></div>)}</div></section>}
     {page.sections.map((section) => <ContentSection key={section.title} section={section} />)}
