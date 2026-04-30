@@ -2,6 +2,7 @@ import { ArrowRight, CheckCircle2, Mail, MonitorCheck, Network, ShieldCheck, Spa
 import { Link } from "react-router-dom";
 import serverRoom from "@/assets/mexaa-server-room.jpg";
 import { Footer, Navigation } from "@/components/MexaaLayout";
+import { FaqSection, WhyMexaa } from "@/components/MexaaSections";
 import { itServices, serviceIcons, solutions } from "@/components/mexaaData";
 
 const ParticleNetwork = () => (
