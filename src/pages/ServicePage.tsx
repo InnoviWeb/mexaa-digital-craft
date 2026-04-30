@@ -4,6 +4,7 @@ import { z } from "zod";
 import { Link } from "react-router-dom";
 import serverRoom from "@/assets/mexaa-server-room.jpg";
 import { FERNWARTUNG_URL, PageShell } from "@/components/MexaaLayout";
+import { FaqSection, getFaqsForPath } from "@/components/MexaaSections";
 
 type PageContent = {
   eyebrow: string;
@@ -200,6 +201,7 @@ export const GenericPage = ({ path }: { path: string }) => {
     {page.stats && <section className="bg-hero px-6 py-[100px] text-hero-foreground"><div className="mx-auto grid max-w-[1200px] gap-6 text-center sm:grid-cols-2 lg:grid-cols-4">{page.stats.map(([n,l]) => <div key={l} className="rounded-md border border-primary-foreground/10 bg-primary-foreground/10 p-7 backdrop-blur"><div className="text-5xl font-black text-primary">{n}</div><div className="mt-3 font-bold text-hero-foreground/70">{l}</div></div>)}</div></section>}
     {page.sections.map((section) => <ContentSection key={section.title} section={section} />)}
     {page.table && <section className="bg-secondary px-6 py-[100px]"><div className="mx-auto max-w-[1200px]"><h2 className="text-[40px] font-extrabold text-section-title">Reaktionszeiten-Tabelle</h2><div className="mt-8 overflow-hidden rounded-md border border-border bg-card shadow-sm">{page.table.map((r) => <div key={r[0]} className="grid grid-cols-3 border-b border-border p-4 last:border-0"><strong>{r[0]}</strong><span>{r[1]}</span><span className="text-muted-foreground">{r[2]}</span></div>)}</div></div></section>}
+    <FaqSection faqs={getFaqsForPath(path)} />
     <ContactCta />
   </PageShell>;
 };
