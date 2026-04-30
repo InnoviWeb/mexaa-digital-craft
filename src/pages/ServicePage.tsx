@@ -3,7 +3,7 @@ import { type FormEvent, useState } from "react";
 import { z } from "zod";
 import { Link } from "react-router-dom";
 import serverRoom from "@/assets/mexaa-server-room.jpg";
-import { PageShell } from "@/components/MexaaLayout";
+import { FERNWARTUNG_URL, PageShell } from "@/components/MexaaLayout";
 
 type PageContent = {
   eyebrow: string;
@@ -99,12 +99,23 @@ const pageData: Record<string, PageContent> = {
     ]
   },
   "/ueber-uns": {
-    eyebrow: "Über uns", title: "IT-Partner mit Haltung, Präzision und Ergebnisfokus", intro: "MEXAA-IT GmbH steht für verlässliche IT-Betreuung, klare Kommunikation und Lösungen, die Unternehmen langfristig stärker machen.",
+    eyebrow: "#thinkforresults!", title: "Steigerung der Wettbewerbsfähigkeit durch innovative digitale Lösungen", intro: "Seit unserer Gründung im Jahr 2013 verfolgen wir ein Ziel: #think for results! Wir setzen auf Transparenz, Verlässlichkeit und nachhaltige Strategien. Mit technischem Know-how auf aktuellem Stand und einem klaren Blick für individuelle Anforderungen entwickeln wir gemeinsam mit unseren Kunden Lösungen, die messbare und langfristige Wettbewerbsvorteile schaffen.",
     sections: [
-      { title: "Unternehmensgeschichte", text: "Aus der täglichen Praxis mittelständischer IT entstand unser Anspruch: weniger Fachchinesisch, mehr Verantwortung, bessere Ergebnisse. Heute begleiten wir Unternehmen bundesweit bei Betrieb, Cloud und Transformation." },
-      { title: "Team", bullets: ["Senior IT Consultants", "Cloud Architects", "Support Specialists", "Security Engineers"] },
-      { title: "Werte", bullets: ["Verantwortung", "Transparenz", "Verlässlichkeit", "Pragmatismus"] },
-    ], stats: [["15+", "Jahre Erfahrung"], ["200+", "Projekte"], ["50+", "Kunden"], ["98%", "Zufriedenheit"]]
+      { title: "Unsere Mission – Zukunft gestalten. Partnerschaftlich. Verlässlich.", text: "Wir verstehen IT als strategischen Erfolgsfaktor. Deshalb hören wir zu, analysieren präzise und entwickeln Lösungen, die zu Ihrem Unternehmen, Ihrer Kultur und Ihren Zielen passen. Unsere Beratung ist hersteller- und reselleroffen – Sie bekommen das, was wirklich zu Ihnen passt." },
+      { title: "Ihre Vorteile", cards: [["Maßgeschneiderte Lösungen", "Konzepte, die exakt auf Ihre Anforderungen zugeschnitten sind."], ["Erfahrene Berater", "Unterstützung durch Spezialisten mit langjähriger Projekterfahrung."], ["Hersteller-unabhängig", "Unabhängig von Herstellern und Resellern – objektiv und im Sinne unserer Kunden."], ["Partnerschaftlich", "Langfristige Zusammenarbeit auf Augenhöhe statt kurzfristiger Verkauf."]] },
+      { title: "Technologien, auf die wir setzen", bullets: ["Microsoft 365 · Microsoft Azure · Microsoft Hyper-V", "Microsoft Intune · Microsoft Defender · Windows Server", "VMware · Proxmox · Citrix · Terraform", "Lenovo · Dell · HP · Apple · Samsung", "Ubiquiti · Placetel · CodeTwo · Robopack", "Atlassian Jira · Confluence · GitHub · XWiki"] },
+      { title: "Teil unserer Erfolgsgeschichte werden", text: "Wir sind immer auf der Suche nach talentierten Persönlichkeiten. Auch wenn derzeit keine passende Stelle ausgeschrieben ist, freuen wir uns auf Ihre Initiativbewerbung." },
+    ], stats: [["2013", "Gegründet"], ["200+", "Projekte"], ["50+", "Kunden"], ["98%", "Zufriedenheit"]]
+  },
+  "/impressum": {
+    eyebrow: "Impressum", title: "Angaben gemäß § 5 DDG", intro: "Rechtliche Informationen zur MEXAA-IT GmbH gemäß den gesetzlichen Anforderungen.",
+    sections: [
+      { title: "Anbieter", text: "MEXAA-IT GmbH · Homburger Str. 69a · D-61118 Bad Vilbel · Handelsregister: HRB 117429 · Registergericht: Amtsgericht Bad Vilbel" },
+      { title: "Vertretungsberechtigt", text: "Geschäftsführer: Mehmet Aggün" },
+      { title: "Kontakt", bullets: ["Telefon: +49 6101 596 9082", "E-Mail: info@mexaa.de"] },
+      { title: "Umsatzsteuer", text: "Umsatzsteuer-Identifikationsnummer nach §27a Umsatzsteuergesetz: DE32 8347185" },
+      { title: "Webdesign und Realisierung", text: "MEXAA-IT GmbH" },
+    ]
   },
   "/karriere": {
     eyebrow: "Karriere", title: "Arbeiten an IT, die Unternehmen wirklich weiterbringt", intro: "Bei MEXAA-IT zählen Eigenverantwortung, sauberes Handwerk und Teamgeist. Wir suchen Menschen, die Verantwortung übernehmen möchten.",
