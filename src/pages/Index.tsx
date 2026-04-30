@@ -1,6 +1,7 @@
 import { ArrowRight, CheckCircle2, Mail, MonitorCheck, Network, ShieldCheck, Sparkles, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import serverRoom from "@/assets/mexaa-server-room.jpg";
+import drDinger from "@/assets/dr-helmut-dinger.avif";
 import { Footer, Navigation } from "@/components/MexaaLayout";
 import { FaqSection, WhyMexaa } from "@/components/MexaaSections";
 import { itServices, serviceIcons, solutions } from "@/components/mexaaData";
@@ -70,17 +71,9 @@ const Index = () => (
 
     <section className="bg-background px-6 py-[100px]"><div className="mx-auto max-w-[1200px] text-center section-reveal"><h2 className="text-[40px] font-extrabold leading-tight text-primary">Ihre IT – sicher, effizient und sorgenfrei</h2><p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-muted-foreground">Wir verbinden strategische Beratung mit operativer Exzellenz – damit Ihre IT nicht bremst, sondern Ihr Wachstum zuverlässig trägt.</p><div className="mt-16 grid gap-6 md:grid-cols-3">{[[ShieldCheck, 'Flexible IT-Flatrates', 'Transparente Leistungen, kalkulierbare Kosten und ein Serviceumfang, der zu Ihrem Unternehmen passt.'], [MonitorCheck, 'Proaktives Monitoring', 'Wir erkennen Risiken frühzeitig, bevor Ausfälle entstehen oder Produktivität verloren geht.'], [Network, 'Persönliche Betreuung', 'Direkte Ansprechpartner, klare Kommunikation und Entscheidungen auf Augenhöhe.']].map(([Icon, title, text]) => { const FeatureIcon = Icon as typeof ShieldCheck; return <article key={title as string} className="rounded-md border border-border bg-card p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-lift"><FeatureIcon className="mx-auto h-10 w-10 text-primary" /><h3 className="mt-6 text-xl font-black">{title as string}</h3><p className="mt-4 leading-7 text-muted-foreground">{text as string}</p></article>; })}</div></div></section>
 
-    <section id="services" className="bg-secondary px-6 py-[100px]"><div className="mx-auto grid max-w-[1200px] gap-10 lg:grid-cols-2"><ServiceList title="IT-Services" items={itServices} /><ServiceList title="Solutions" items={solutions} /></div></section>
-
-    <section className="bg-hero px-6 py-[100px] text-hero-foreground"><div className="mx-auto grid max-w-[1200px] gap-8 text-center sm:grid-cols-2 lg:grid-cols-4">{[['200+', 'Projekte'], ['50+', 'Kunden'], ['15+', 'Jahre'], ['98%', 'Zufriedenheit']].map(([number, label], index) => <div key={label} className="animate-count-pop rounded-md border border-primary-foreground/10 bg-primary-foreground/10 p-8 backdrop-blur" style={{ animationDelay: `${index * 110}ms` }}><div className="text-5xl font-black tracking-tight text-primary">{number}</div><div className="mt-3 text-sm font-extrabold uppercase tracking-[0.2em] text-hero-foreground/70">{label}</div></div>)}</div></section>
-
-    <section className="bg-background px-6 py-[100px]"><div className="mx-auto max-w-[1200px]"><h2 className="text-center text-[40px] font-extrabold leading-tight text-section-title">Vertrauen, das im Alltag entsteht</h2><div className="mt-14 grid gap-6 lg:grid-cols-3">{[['SK', '„MEXAA-IT hat unsere Microsoft 365 Umgebung sauber strukturiert und die Akzeptanz im Team spürbar erhöht.“', 'Geschäftsführung, Kanzlei'], ['AM', '„Support reagiert schnell, dokumentiert nachvollziehbar und denkt immer einen Schritt weiter.“', 'Leitung Operations, Mittelstand'], ['TB', '„Der Rollout lief im laufenden Betrieb ruhig, planbar und professionell – genau wie versprochen.“', 'IT-Koordination, Handelsgruppe']].map(([initials, quote, role]) => <article key={initials} className="rounded-md border border-border bg-card p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-lift"><div className="mb-5 flex gap-1 text-primary">{Array.from({ length: 5 }).map((_, i) => <Star key={i} className="h-5 w-5 fill-current" />)}</div><p className="text-lg font-semibold leading-8 text-foreground">{quote}</p><div className="mt-7 flex items-center gap-4"><span className="grid h-12 w-12 place-items-center rounded-full bg-primary font-black text-primary-foreground">{initials}</span><span className="text-sm font-bold text-muted-foreground">{role}</span></div></article>)}</div></div></section>
-
-    <WhyMexaa />
-
-    <section className="bg-secondary px-6 py-[100px]">
+    <section className="bg-background px-6 py-[100px]">
       <div className="mx-auto max-w-[1100px]">
-        <div className="grid gap-10 rounded-3xl bg-card p-8 shadow-lift md:grid-cols-[1fr_280px] md:p-12">
+        <div className="grid gap-10 rounded-3xl border border-border bg-card p-8 shadow-lift md:grid-cols-[1fr_280px] md:p-12">
           <div className="relative">
             <span className="absolute -left-2 -top-6 text-[120px] font-black leading-none text-primary/15">"</span>
             <div className="mb-5 flex gap-1 text-primary">
@@ -95,13 +88,33 @@ const Index = () => (
             </div>
           </div>
           <div className="hidden items-center justify-center md:flex">
-            <div className="grid h-[280px] w-[240px] place-items-center rounded-2xl bg-gradient-to-br from-primary to-primary/70 text-7xl font-black text-primary-foreground shadow-glow">
-              HD
-            </div>
+            <img
+              src={drDinger}
+              alt="Dr. Helmut Dinger, Geschäftsführer RWTH International Academy"
+              width={240}
+              height={280}
+              className="h-[280px] w-[240px] rounded-2xl object-cover shadow-glow"
+            />
           </div>
         </div>
       </div>
     </section>
+
+    <WhyMexaa />
+
+    <section id="services" className="bg-secondary px-6 py-[100px]">
+      <div className="mx-auto max-w-[1200px]">
+        <div className="mb-14 text-center section-reveal">
+          <h2 className="text-[40px] font-extrabold leading-tight text-section-title">Unsere Leistungen im Überblick</h2>
+          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-muted-foreground">Von Managed Services bis zu Cloud-Lösungen – alles aus einer Hand.</p>
+        </div>
+        <div className="grid gap-10 lg:grid-cols-2">
+          <ServiceList title="IT-Services" items={itServices} />
+          <ServiceList title="Solutions" items={solutions} />
+        </div>
+      </div>
+    </section>
+
 
     <FaqSection />
 
