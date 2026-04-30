@@ -78,6 +78,31 @@ const Index = () => (
 
     <WhyMexaa />
 
+    <section className="bg-secondary px-6 py-[100px]">
+      <div className="mx-auto max-w-[1100px]">
+        <div className="grid gap-10 rounded-3xl bg-card p-8 shadow-lift md:grid-cols-[1fr_280px] md:p-12">
+          <div className="relative">
+            <span className="absolute -left-2 -top-6 text-[120px] font-black leading-none text-primary/15">"</span>
+            <div className="mb-5 flex gap-1 text-primary">
+              {Array.from({ length: 5 }).map((_, i) => <Star key={i} className="h-5 w-5 fill-current" />)}
+            </div>
+            <p className="relative text-lg font-medium leading-8 text-foreground">
+              Mit MEXAA-IT als unseren Full-Service IT-Dienstleister haben wir ganz ausgezeichnete Erfahrungen gemacht! Mit systemübergreifender IT-Kompetenz, hohem persönlichen Engagement, Pragmatismus und einem sehr guten Problemlösungsverständnis haben wir in kurzer Zeit den Umstieg von einer traditionellen in eine moderne cloudbasierte IT-Welt geschafft. Der gelungene Umstieg hat sich in einer partnerschaftlichen Zusammenarbeit im Bereich des IT-Supports, der Datensicherheit und der Systemoptimierung fortgesetzt. Ergebnis ist eine sehr hohe Verfügbarkeit der IT-Anwendungen, planbare Kosten und auch auf der menschlichen Ebene das gute Gefühl immer einen kompetenten Ansprechpartner in allen IT-Fragen an unserer Seite zu haben.
+            </p>
+            <div className="mt-8 border-l-4 border-primary pl-5">
+              <div className="text-base font-black text-foreground">Dr. Helmut Dinger</div>
+              <div className="mt-1 text-sm font-semibold text-muted-foreground">Geschäftsführer · RWTH International Academy gGmbH</div>
+            </div>
+          </div>
+          <div className="hidden items-center justify-center md:flex">
+            <div className="grid h-[280px] w-[240px] place-items-center rounded-2xl bg-gradient-to-br from-primary to-primary/70 text-7xl font-black text-primary-foreground shadow-glow">
+              HD
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <FaqSection />
 
     <section id="contact" className="bg-hero px-6 py-[100px] text-center text-hero-foreground"><div className="mx-auto max-w-[1200px]"><h2 className="text-[40px] font-extrabold leading-tight text-hero-foreground">Bereit für Ihre digitale Transformation?</h2><p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-hero-foreground/75">Sprechen wir über Ihre Ziele, Risiken und nächsten Schritte. In einem unverbindlichen Erstgespräch erhalten Sie eine klare Einschätzung für Ihre IT-Roadmap.</p><Link to="/kontakt" className="mt-10 inline-flex items-center gap-2 rounded-md bg-primary px-8 py-4 text-base font-black text-primary-foreground shadow-glow transition hover:-translate-y-1 hover:shadow-lift"><Mail className="h-5 w-5" /> Kontakt aufnehmen</Link></div></section>
