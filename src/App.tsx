@@ -21,6 +21,7 @@ import UeberUns from "./pages/subpages/UeberUns";
 import Karriere from "./pages/subpages/Karriere";
 import SozialesEngagement from "./pages/subpages/SozialesEngagement";
 import Kontakt from "./pages/subpages/Kontakt";
+import Impressum from "./pages/subpages/Impressum";
 
 const queryClient = new QueryClient();
 
@@ -49,6 +50,7 @@ const App = () => (
           <Route path="/karriere" element={<Karriere />} />
           <Route path="/soziales-engagement" element={<SozialesEngagement />} />
           <Route path="/kontakt" element={<Kontakt />} />
+          <Route path="/impressum" element={<Impressum />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

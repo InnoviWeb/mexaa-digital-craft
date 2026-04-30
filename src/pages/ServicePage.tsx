@@ -3,7 +3,7 @@ import { type FormEvent, useState } from "react";
 import { z } from "zod";
 import { Link } from "react-router-dom";
 import serverRoom from "@/assets/mexaa-server-room.jpg";
-import { PageShell } from "@/components/MexaaLayout";
+import { FERNWARTUNG_URL, PageShell } from "@/components/MexaaLayout";
 
 type PageContent = {
   eyebrow: string;
@@ -99,12 +99,23 @@ const pageData: Record<string, PageContent> = {
     ]
   },
   "/ueber-uns": {
-    eyebrow: "Über uns", title: "IT-Partner mit Haltung, Präzision und Ergebnisfokus", intro: "MEXAA-IT GmbH steht für verlässliche IT-Betreuung, klare Kommunikation und Lösungen, die Unternehmen langfristig stärker machen.",
+    eyebrow: "#thinkforresults!", title: "Steigerung der Wettbewerbsfähigkeit durch innovative digitale Lösungen", intro: "Seit unserer Gründung im Jahr 2013 verfolgen wir ein Ziel: #think for results! Wir setzen auf Transparenz, Verlässlichkeit und nachhaltige Strategien. Mit technischem Know-how auf aktuellem Stand und einem klaren Blick für individuelle Anforderungen entwickeln wir gemeinsam mit unseren Kunden Lösungen, die messbare und langfristige Wettbewerbsvorteile schaffen.",
     sections: [
-      { title: "Unternehmensgeschichte", text: "Aus der täglichen Praxis mittelständischer IT entstand unser Anspruch: weniger Fachchinesisch, mehr Verantwortung, bessere Ergebnisse. Heute begleiten wir Unternehmen bundesweit bei Betrieb, Cloud und Transformation." },
-      { title: "Team", bullets: ["Senior IT Consultants", "Cloud Architects", "Support Specialists", "Security Engineers"] },
-      { title: "Werte", bullets: ["Verantwortung", "Transparenz", "Verlässlichkeit", "Pragmatismus"] },
-    ], stats: [["15+", "Jahre Erfahrung"], ["200+", "Projekte"], ["50+", "Kunden"], ["98%", "Zufriedenheit"]]
+      { title: "Unsere Mission – Zukunft gestalten. Partnerschaftlich. Verlässlich.", text: "Wir verstehen IT als strategischen Erfolgsfaktor. Deshalb hören wir zu, analysieren präzise und entwickeln Lösungen, die zu Ihrem Unternehmen, Ihrer Kultur und Ihren Zielen passen. Unsere Beratung ist hersteller- und reselleroffen – Sie bekommen das, was wirklich zu Ihnen passt." },
+      { title: "Ihre Vorteile", cards: [["Maßgeschneiderte Lösungen", "Konzepte, die exakt auf Ihre Anforderungen zugeschnitten sind."], ["Erfahrene Berater", "Unterstützung durch Spezialisten mit langjähriger Projekterfahrung."], ["Hersteller-unabhängig", "Unabhängig von Herstellern und Resellern – objektiv und im Sinne unserer Kunden."], ["Partnerschaftlich", "Langfristige Zusammenarbeit auf Augenhöhe statt kurzfristiger Verkauf."]] },
+      { title: "Technologien, auf die wir setzen", bullets: ["Microsoft 365 · Microsoft Azure · Microsoft Hyper-V", "Microsoft Intune · Microsoft Defender · Windows Server", "VMware · Proxmox · Citrix · Terraform", "Lenovo · Dell · HP · Apple · Samsung", "Ubiquiti · Placetel · CodeTwo · Robopack", "Atlassian Jira · Confluence · GitHub · XWiki"] },
+      { title: "Teil unserer Erfolgsgeschichte werden", text: "Wir sind immer auf der Suche nach talentierten Persönlichkeiten. Auch wenn derzeit keine passende Stelle ausgeschrieben ist, freuen wir uns auf Ihre Initiativbewerbung." },
+    ], stats: [["2013", "Gegründet"], ["200+", "Projekte"], ["50+", "Kunden"], ["98%", "Zufriedenheit"]]
+  },
+  "/impressum": {
+    eyebrow: "Impressum", title: "Angaben gemäß § 5 DDG", intro: "Rechtliche Informationen zur MEXAA-IT GmbH gemäß den gesetzlichen Anforderungen.",
+    sections: [
+      { title: "Anbieter", text: "MEXAA-IT GmbH · Homburger Str. 69a · D-61118 Bad Vilbel · Handelsregister: HRB 117429 · Registergericht: Amtsgericht Bad Vilbel" },
+      { title: "Vertretungsberechtigt", text: "Geschäftsführer: Mehmet Aggün" },
+      { title: "Kontakt", bullets: ["Telefon: +49 6101 596 9082", "E-Mail: info@mexaa.de"] },
+      { title: "Umsatzsteuer", text: "Umsatzsteuer-Identifikationsnummer nach §27a Umsatzsteuergesetz: DE32 8347185" },
+      { title: "Webdesign und Realisierung", text: "MEXAA-IT GmbH" },
+    ]
   },
   "/karriere": {
     eyebrow: "Karriere", title: "Arbeiten an IT, die Unternehmen wirklich weiterbringt", intro: "Bei MEXAA-IT zählen Eigenverantwortung, sauberes Handwerk und Teamgeist. Wir suchen Menschen, die Verantwortung übernehmen möchten.",
@@ -139,11 +150,15 @@ const Hero = ({ eyebrow, title, intro }: { eyebrow: string; title: string; intro
 );
 
 const ContactCta = () => (
-  <section className="bg-hero px-6 py-[100px] text-center text-hero-foreground">
+  <section className="bg-background px-6 py-[100px]">
     <div className="mx-auto max-w-[1200px]">
-      <h2 className="text-[40px] font-extrabold leading-tight text-hero-foreground">Bereit für den nächsten Schritt?</h2>
-      <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-hero-foreground/72">Lassen Sie uns Ihre Anforderungen gemeinsam bewerten und eine klare, realistische IT-Roadmap entwickeln.</p>
-      <Link to="/kontakt" className="mt-9 inline-flex items-center gap-2 rounded-md bg-primary px-8 py-4 font-black text-primary-foreground shadow-glow transition hover:-translate-y-1 hover:shadow-lift">Kontakt aufnehmen <ArrowRight className="h-5 w-5" /></Link>
+      <div className="flex flex-col items-start justify-between gap-8 rounded-2xl bg-hero p-10 text-hero-foreground shadow-lift md:flex-row md:items-center md:p-14">
+        <div className="max-w-2xl">
+          <h2 className="text-[32px] font-extrabold leading-tight md:text-[40px]">Jetzt persönliche Beratung anfragen</h2>
+          <p className="mt-4 text-lg leading-8 text-hero-foreground/75">Unsere Teams stehen Ihnen deutschlandweit zur Verfügung. Lassen Sie uns gemeinsam besprechen, wie wir Ihre IT zukunftssicher aufstellen können.</p>
+        </div>
+        <Link to="/kontakt" className="inline-flex shrink-0 items-center gap-2 rounded-md bg-primary px-7 py-4 font-black text-primary-foreground shadow-glow transition hover:-translate-y-1 hover:shadow-lift">Jetzt Kontakt aufnehmen <ArrowRight className="h-5 w-5" /></Link>
+      </div>
     </div>
   </section>
 );
@@ -174,7 +189,7 @@ const ContactPage = () => {
   return <PageShell><Hero eyebrow="Kontakt" title="Sprechen wir über Ihre IT-Ziele" intro="Ob Beratung, Support oder konkretes Projekt: Wir melden uns schnell und mit einer klaren nächsten Empfehlung." />
     <section className="bg-background px-6 py-[100px]"><div className="mx-auto grid max-w-[1200px] gap-10 lg:grid-cols-[1.1fr_.9fr]">
       <form onSubmit={submit} className="rounded-md border border-border bg-card p-8 shadow-lift"><div className="grid gap-5 md:grid-cols-2">{[["name","Name"],["firma","Firma"],["email","Email"],["telefon","Telefon"]].map(([n,l]) => <label key={n} className="text-sm font-bold">{l}<input name={n} className="mt-2 w-full rounded-md border border-input bg-background px-4 py-3 outline-none focus:ring-2 focus:ring-ring" />{errors[n] && <span className="mt-1 block text-xs text-destructive">{errors[n]}</span>}</label>)}<label className="text-sm font-bold md:col-span-2">Betreff<select name="betreff" className="mt-2 w-full rounded-md border border-input bg-background px-4 py-3 outline-none focus:ring-2 focus:ring-ring"><option value="">Bitte wählen</option><option>Managed Service</option><option>Cloud Projekt</option><option>Support Anfrage</option><option>Karriere</option></select>{errors.betreff && <span className="mt-1 block text-xs text-destructive">{errors.betreff}</span>}</label><label className="text-sm font-bold md:col-span-2">Nachricht<textarea name="nachricht" rows={6} className="mt-2 w-full rounded-md border border-input bg-background px-4 py-3 outline-none focus:ring-2 focus:ring-ring" />{errors.nachricht && <span className="mt-1 block text-xs text-destructive">{errors.nachricht}</span>}</label></div><label className="mt-5 flex gap-3 text-sm text-muted-foreground"><input name="dsgvo" type="checkbox" className="mt-1" /> Ich stimme der Verarbeitung meiner Angaben zur Kontaktaufnahme zu.</label>{errors.dsgvo && <span className="mt-1 block text-xs text-destructive">Bitte stimmen Sie zu.</span>}<button className="mt-7 rounded-md bg-primary px-7 py-4 font-black text-primary-foreground shadow-glow transition hover:-translate-y-1">Anfrage senden</button></form>
-      <aside className="rounded-md bg-hero p-8 text-hero-foreground shadow-lift"><h2 className="text-[40px] font-extrabold">Direkter Kontakt</h2><div className="mt-8 space-y-5 text-hero-foreground/75"><p><strong className="block text-hero-foreground">Adresse</strong>MEXAA-IT GmbH · Deutschlandweit für Unternehmen im Einsatz</p><p><strong className="block text-hero-foreground">Telefon</strong>+49 000 000000</p><p className="flex gap-3"><Mail className="h-5 w-5 text-primary" /> kontakt@mexaa-it.de</p><p className="flex gap-3"><Clock className="h-5 w-5 text-primary" /> Öffnungszeiten: Mo–Fr 08:00–18:00 Uhr</p><p className="flex gap-3"><ShieldCheck className="h-5 w-5 text-primary" /> Sichere Fernwartung nach ausdrücklicher Freigabe</p></div><button className="mt-8 rounded-md border border-primary-foreground/20 px-5 py-3 font-black transition hover:bg-primary">Fernwartung starten</button></aside>
+      <aside className="rounded-md bg-hero p-8 text-hero-foreground shadow-lift"><h2 className="text-[40px] font-extrabold">Direkter Kontakt</h2><div className="mt-8 space-y-5 text-hero-foreground/75"><p><strong className="block text-hero-foreground">Adresse</strong>MEXAA-IT GmbH · Homburger Str. 69a · 61118 Bad Vilbel</p><p><strong className="block text-hero-foreground">Telefon</strong>+49 6101 596 9082</p><p className="flex gap-3"><Mail className="h-5 w-5 text-primary" /> info@mexaa.de</p><p className="flex gap-3"><Clock className="h-5 w-5 text-primary" /> Öffnungszeiten: Mo–Fr 08:00–18:00 Uhr</p><p className="flex gap-3"><ShieldCheck className="h-5 w-5 text-primary" /> Sichere Fernwartung nach ausdrücklicher Freigabe</p></div><a href={FERNWARTUNG_URL} target="_blank" rel="noreferrer" className="mt-8 inline-flex rounded-md border border-primary-foreground/20 px-5 py-3 font-black transition hover:bg-primary">Fernwartung starten</a></aside>
     </div></section></PageShell>;
 };
 
