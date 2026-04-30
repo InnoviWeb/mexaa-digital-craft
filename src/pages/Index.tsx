@@ -1,6 +1,7 @@
 import { ArrowRight, CheckCircle2, Mail, MonitorCheck, Network, ShieldCheck, Sparkles, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import serverRoom from "@/assets/mexaa-server-room.jpg";
+import drDinger from "@/assets/dr-helmut-dinger.avif";
 import { Footer, Navigation } from "@/components/MexaaLayout";
 import { FaqSection, WhyMexaa } from "@/components/MexaaSections";
 import { itServices, serviceIcons, solutions } from "@/components/mexaaData";
