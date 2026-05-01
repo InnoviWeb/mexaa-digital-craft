@@ -1,58 +1,78 @@
-import { ArrowRight, ChevronDown, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { ArrowRight, ChevronDown, Linkedin, Mail, MapPin, Menu, Phone, X } from "lucide-react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/mexaa-logo.png";
 import { itServices, navGroups, solutions } from "./mexaaData";
 
 export const FERNWARTUNG_URL = "https://mexaa.islonline.net/users/main/join.html";
 
-export const Navigation = () => (
-  <header className="fixed inset-x-0 top-0 z-50 border-b border-primary-foreground/10 bg-hero/75 backdrop-blur-2xl">
-    <nav className="mx-auto flex h-20 max-w-[1200px] items-center justify-between px-6" aria-label="Hauptnavigation">
-      <Link to="/" className="group flex items-center gap-3" aria-label="MEXAA-IT Startseite">
-        <img src={logo} alt="MEXAA-IT Logo" width={44} height={44} className="h-11 w-11 object-contain" />
-        <span className="leading-tight text-hero-foreground">
-          <span className="block text-lg font-black tracking-tight">MEXAA-IT</span>
-          <span className="block text-xs font-semibold text-hero-foreground/70">think for results!</span>
-        </span>
-      </Link>
-      <div className="hidden items-center gap-1 lg:flex">
-        {navGroups.map((group) => {
-          const Icon = group.icon;
-          return (
-            <div key={group.title} className="group relative">
-              <button className="flex items-center gap-2 rounded-md px-4 py-3 text-sm font-semibold text-hero-foreground/85 transition hover:bg-primary-foreground/10 hover:text-hero-foreground">
-                <Icon className="h-4 w-4" /> {group.title} <ChevronDown className="h-4 w-4 transition group-hover:rotate-180" />
-              </button>
-              <div className="nav-dropdown">
-                {group.items.map((item) => (
-                  <Link key={item.path} to={item.path} className="flex items-center justify-between rounded-sm px-3 py-3 text-sm font-semibold text-foreground transition hover:bg-secondary hover:text-primary">
-                    {item.label}
-                    <ArrowRight className="h-4 w-4" />
-                  </Link>
-                ))}
+export const Navigation = () => {
+  const [open, setOpen] = useState(false);
+  return (
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-border bg-background/90 backdrop-blur-2xl shadow-sm">
+      <nav className="mx-auto flex h-20 max-w-[1200px] items-center justify-between px-6" aria-label="Hauptnavigation">
+        <Link to="/" className="flex items-center" aria-label="MEXAA-IT Startseite">
+          <img src={logo} alt="MEXAA-IT Logo" width={160} height={48} className="h-12 w-auto object-contain" />
+        </Link>
+        <div className="hidden items-center gap-1 lg:flex">
+          {navGroups.map((group) => {
+            const Icon = group.icon;
+            return (
+              <div key={group.title} className="group relative">
+                <button className="flex items-center gap-2 rounded-md px-4 py-3 text-sm font-semibold text-foreground/80 transition hover:bg-secondary hover:text-primary">
+                  <Icon className="h-4 w-4" /> {group.title} <ChevronDown className="h-4 w-4 transition group-hover:rotate-180" />
+                </button>
+                <div className="nav-dropdown">
+                  {group.items.map((item) => (
+                    <Link key={item.path} to={item.path} className="flex items-center justify-between rounded-sm px-3 py-3 text-sm font-semibold text-foreground transition hover:bg-secondary hover:text-primary">
+                      {item.label}
+                      <ArrowRight className="h-4 w-4" />
+                    </Link>
+                  ))}
+                </div>
               </div>
-            </div>
-          );
-        })}
-      </div>
-      <Link to="/kontakt" className="rounded-md bg-primary px-5 py-3 text-sm font-extrabold text-primary-foreground shadow-glow transition hover:-translate-y-0.5 hover:shadow-lift focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-hero">
-        Kontakt
-      </Link>
-    </nav>
-  </header>
-);
+            );
+          })}
+        </div>
+        <div className="flex items-center gap-2">
+          <Link to="/kontakt" className="hidden rounded-md bg-primary px-5 py-3 text-sm font-extrabold text-primary-foreground shadow-glow transition hover:-translate-y-0.5 hover:shadow-lift sm:inline-flex">
+            Kontakt
+          </Link>
+          <button onClick={() => setOpen(!open)} aria-label="Menü öffnen" className="grid h-11 w-11 place-items-center rounded-md border border-border text-foreground lg:hidden">
+            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+        </div>
+      </nav>
+      {open && (
+        <div className="border-t border-border bg-background lg:hidden">
+          <div className="mx-auto max-w-[1200px] px-6 py-4">
+            {navGroups.map((group) => (
+              <div key={group.title} className="border-b border-border py-3 last:border-0">
+                <div className="mb-2 text-xs font-black uppercase tracking-wider text-muted-foreground">{group.title}</div>
+                <div className="grid gap-1">
+                  {group.items.map((item) => (
+                    <Link key={item.path} to={item.path} onClick={() => setOpen(false)} className="rounded-md px-3 py-2 text-sm font-semibold text-foreground hover:bg-secondary hover:text-primary">
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ))}
+            <Link to="/kontakt" onClick={() => setOpen(false)} className="mt-4 inline-flex w-full items-center justify-center rounded-md bg-primary px-5 py-3 text-sm font-extrabold text-primary-foreground sm:hidden">
+              Kontakt
+            </Link>
+          </div>
+        </div>
+      )}
+    </header>
+  );
+};
 
 export const Footer = () => (
   <footer className="bg-footer px-6 py-16 text-hero-foreground">
     <div className="mx-auto grid max-w-[1200px] gap-10 md:grid-cols-2 lg:grid-cols-5">
       <div>
-        <div className="flex items-center gap-3">
-          <img src={logo} alt="MEXAA-IT Logo" width={40} height={40} className="h-10 w-10 object-contain" />
-          <div>
-            <div className="text-2xl font-black">MEXAA-IT</div>
-            <div className="text-sm font-bold text-hero-foreground/60">think for results!</div>
-          </div>
-        </div>
+        <img src={logo} alt="MEXAA-IT Logo" width={170} height={52} className="h-13 w-auto object-contain brightness-0 invert" />
         <p className="mt-6 text-sm leading-6 text-hero-foreground/65">Professionelle IT-Services, Cloud-Lösungen und Beratung für Unternehmen in Deutschland. Seit 2013 entwickeln wir IT, die Wettbewerbsvorteile schafft.</p>
       </div>
       {[["IT-Services", itServices], ["Solutions", solutions.slice(0, 6)], ["Unternehmen", navGroups[2].items]].map(([title, links]) => (
