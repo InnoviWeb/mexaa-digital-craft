@@ -97,7 +97,7 @@ export const Footer = () => (
       </div>
     </div>
     <div className="mx-auto mt-12 flex max-w-[1200px] flex-col gap-4 border-t border-primary-foreground/10 pt-8 text-sm text-hero-foreground/55 md:flex-row md:items-center md:justify-between">
-      <p>© 2026 MEXAA-IT GmbH · HRB 117429 · Bad Vilbel</p>
+      <p>© 2026 MEXAA-IT GmbH - Alle Rechte vorbehalten.</p>
       <div className="flex flex-wrap gap-5"><Link to="/impressum">Impressum</Link><a href="#">AGB</a><a href="#">Datenschutz</a><a href="#">Cookies</a></div>
     </div>
   </footer>
