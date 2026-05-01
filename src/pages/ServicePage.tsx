@@ -17,83 +17,95 @@ type PageContent = {
 
 const pageData: Record<string, PageContent> = {
   "/managed-service": {
-    eyebrow: "Managed Service", title: "Managed Services, die Ihre IT dauerhaft stabil halten", intro: "Wir betreiben Ihre IT proaktiv, transparent und mit klaren Service-Leveln – damit Ihr Team arbeiten kann, während wir Risiken früh erkennen und lösen.",
+    eyebrow: "Managed Service", title: "Managed Services, die Ihre IT dauerhaft stabil halten",
+    intro: "Mit unseren Managed Services übernehmen wir die kontinuierliche Verantwortung für den Betrieb Ihrer IT-Landschaft. Wir überwachen Server, Clients, Netzwerke und Cloud-Dienste rund um die Uhr, installieren Updates kontrolliert, sichern Daten zuverlässig und beheben Störungen meist, bevor Sie sie überhaupt bemerken. Sie erhalten planbare monatliche Kosten, klare Service-Level und einen festen Ansprechpartner, der Ihre Umgebung wirklich kennt – damit sich Ihr Team auf das Kerngeschäft konzentrieren kann.",
     sections: [
-      { title: "Was ist Managed Service?", text: "Managed Service bedeutet: Ihre IT wird nicht erst betreut, wenn etwas ausfällt. MEXAA-IT überwacht Systeme, installiert Updates, dokumentiert Änderungen und optimiert Ihre Umgebung kontinuierlich." },
+      { title: "Was ist Managed Service?", text: "Managed Service bedeutet: Ihre IT wird nicht erst betreut, wenn etwas ausfällt. MEXAA-IT überwacht Systeme, installiert Updates, dokumentiert Änderungen und optimiert Ihre Umgebung kontinuierlich. So entstehen weniger Tickets, kürzere Stillstandzeiten und eine IT, die mit Ihrem Unternehmen mitwächst." },
       { title: "Leistungsumfang", bullets: ["Server- und Client-Monitoring", "Patch- und Update-Management", "Backup-Kontrolle und Wiederherstellungstests", "Endpoint Security und Schwachstellenbewertung", "Regelmäßige IT-Reviews", "Persönlicher Service Manager"] },
       { title: "Vorteile", bullets: ["Planbare Kosten statt Überraschungen", "Weniger Ausfallzeiten im Tagesgeschäft", "Bessere Dokumentation und Compliance", "Schnelle Eskalation bei kritischen Ereignissen"] },
     ], stats: [["99.9%", "Uptime"], ["<2h", "Reaktion"], ["24/7", "Monitoring"], ["100%", "Transparenz"]]
   },
   "/it-outsourcing": {
-    eyebrow: "IT-Outsourcing", title: "Ihre IT-Abteilung als verlässlicher externer Partner", intro: "Wir übernehmen Verantwortung für Betrieb, Support und Weiterentwicklung Ihrer IT – flexibel skalierbar und wirtschaftlich planbar.",
+    eyebrow: "IT-Outsourcing", title: "Ihre IT-Abteilung als verlässlicher externer Partner",
+    intro: "IT-Outsourcing mit MEXAA-IT bedeutet, dass Sie sich auf einen erfahrenen Partner verlassen können, der Verantwortung für Betrieb, Support und Weiterentwicklung Ihrer IT übernimmt. Ob als vollständige Auslagerung oder als Ergänzung Ihres internen Teams: Wir definieren klare Prozesse, übernehmen die Steuerung von Lieferanten und Lizenzen und sorgen für eine moderne, sichere und wirtschaftlich planbare IT. So gewinnen Sie Flexibilität, reduzieren Risiken und erhalten gleichzeitig Zugriff auf hochqualifizierte Spezialisten.",
     sections: [
-      { title: "Vollständige IT-Auslagerung", text: "Ob Ergänzung Ihres internen Teams oder vollständige Auslagerung: Wir schaffen klare Zuständigkeiten, definierte Prozesse und einen Service, der zu Ihrem Unternehmen passt." },
+      { title: "Vollständige IT-Auslagerung", text: "Ob Ergänzung Ihres internen Teams oder vollständige Auslagerung: Wir schaffen klare Zuständigkeiten, definierte Prozesse und einen Service, der zu Ihrem Unternehmen passt. Sie behalten die strategische Kontrolle, wir übernehmen den operativen Betrieb mit dokumentierten Standards." },
       { title: "Leistungspunkte", bullets: ["Betrieb von Infrastruktur und Arbeitsplätzen", "Helpdesk für Anwenderinnen und Anwender", "Lieferanten- und Lizenzmanagement", "Cloud- und Security-Betrieb", "Projektsteuerung und Dokumentation", "Strategische IT-Roadmap"] },
     ], stats: [["30%", "Kostensenkung"], ["1", "Ansprechpartner"], ["Flex", "Skalierung"], ["0", "Ausfallzeiten"]]
   },
   "/it-service-support": {
-    eyebrow: "IT-Service & Support", title: "Helpdesk und Support mit klarer Reaktionszeit", intro: "Unser Support löst technische Anliegen schnell, verständlich und nachvollziehbar – vom Passwortproblem bis zur komplexen Störung.",
+    eyebrow: "IT-Service & Support", title: "Helpdesk und Support mit klarer Reaktionszeit",
+    intro: "Unser IT-Service & Support steht Ihren Mitarbeitenden als zuverlässige Anlaufstelle für alle technischen Fragen zur Verfügung. Wir lösen Anliegen aus erster Hand, dokumentieren transparent jede Anfrage und eskalieren komplexe Themen strukturiert an unsere Fachspezialisten. Vom einfachen Passwort-Reset über Druckerprobleme bis hin zu kritischen Server-Störungen – Sie erhalten schnelle Hilfe per Remote-Verbindung, telefonisch oder direkt vor Ort, mit klar definierten Reaktionszeiten und nachvollziehbarer Bearbeitung.",
     sections: [
-      { title: "Helpdesk & Support", text: "Wir entlasten Ihre Mitarbeitenden mit einem professionellen First- und Second-Level-Support, sauberer Ticketdokumentation und priorisierten Eskalationswegen." },
+      { title: "Helpdesk & Support", text: "Wir entlasten Ihre Mitarbeitenden mit einem professionellen First- und Second-Level-Support, sauberer Ticketdokumentation und priorisierten Eskalationswegen. Jede Anfrage wird erfasst, klassifiziert und nach vereinbarten SLAs bearbeitet – inklusive monatlicher Auswertung." },
       { title: "Leistungen", bullets: ["Remote- und Vor-Ort-Support", "Ticketannahme und Priorisierung", "Benutzerverwaltung", "Hardware- und Software-Support", "Störungsanalyse", "Monatliche Support-Auswertung"] },
     ], table: [["Kritisch", "< 2 Stunden", "Betriebsunterbrechung"], ["Hoch", "< 4 Stunden", "Mehrere Nutzer betroffen"], ["Normal", "< 1 Arbeitstag", "Einzelanfrage"], ["Service", "Nach Vereinbarung", "Änderung oder Bestellung"]]
   },
   "/it-rollout": {
-    eyebrow: "IT-Rollout", title: "Rollouts ohne Chaos, Stillstand oder Überraschungen", intro: "Wir planen und realisieren Hardware-, Software- und Standort-Rollouts mit sauberer Kommunikation, Tests und messbarer Qualität.",
+    eyebrow: "IT-Rollout", title: "Rollouts ohne Chaos, Stillstand oder Überraschungen",
+    intro: "Ein erfolgreicher IT-Rollout entscheidet darüber, wie schnell und reibungslos Ihre Mitarbeitenden mit neuer Technologie produktiv werden. MEXAA-IT plant und realisiert Hardware-Rollouts, Microsoft 365 Migrationen, Standortumzüge und Software-Verteilungen mit präziser Vorbereitung, klaren Kommunikationswegen und ausführlichen Tests. Vom Pilotprojekt über die Paketierung bis zur finalen Abnahme begleiten wir jeden Schritt, schulen Ihre Anwender und liefern eine vollständige Dokumentation – damit der Rollout messbar erfolgreich ist.",
     sections: [
       { title: "Rollout-Prozess", steps: ["Analyse", "Pilotierung", "Paketierung", "Ausführung", "Abnahme"] },
       { title: "Leistungen", bullets: ["Client- und Notebook-Rollouts", "Microsoft 365 Migrationen", "Standort- und Netzwerkumzüge", "Image- und Softwareverteilung", "Benutzereinweisung", "Abschlussdokumentation"] },
     ]
   },
   "/it-beratung": {
-    eyebrow: "IT-Beratung", title: "Strategische IT-Beratung mit Blick auf Ergebnisse", intro: "Wir verbinden technische Tiefe mit wirtschaftlicher Perspektive und entwickeln Roadmaps, die realistisch umsetzbar sind.",
+    eyebrow: "IT-Beratung", title: "Strategische IT-Beratung mit Blick auf Ergebnisse",
+    intro: "IT-Beratung von MEXAA-IT verbindet technische Tiefe mit wirtschaftlichem Verständnis. Wir analysieren Ihre bestehende Infrastruktur, identifizieren Risiken und Effizienzpotenziale und entwickeln gemeinsam mit Ihnen eine realistische Roadmap. Dabei sind wir hersteller- und reselleroffen: Empfehlungen entstehen ausschließlich auf Basis Ihres Bedarfs, Ihrer Sicherheitsanforderungen und Ihrer wirtschaftlichen Rahmenbedingungen. Sie erhalten klare Entscheidungsgrundlagen, priorisierte Maßnahmen und einen Umsetzungsplan, der zu Ihrem Unternehmen passt.",
     sections: [
-      { title: "Unser Beratungsansatz", text: "Wir analysieren Systeme, Risiken, Kosten und Prozesse. Daraus entstehen priorisierte Maßnahmen, klare Entscheidungsgrundlagen und ein realistischer Umsetzungsplan." },
+      { title: "Unser Beratungsansatz", text: "Wir analysieren Systeme, Risiken, Kosten und Prozesse. Daraus entstehen priorisierte Maßnahmen, klare Entscheidungsgrundlagen und ein realistischer Umsetzungsplan. Unsere Beratung ist immer ergebnisorientiert – mit messbarem Mehrwert für Ihr Unternehmen." },
       { title: "Leistungen", bullets: ["IT-Audit und Reifegradanalyse", "Cloud- und Security-Strategie", "Lizenz- und Kostenoptimierung", "Modern Workplace Konzepte", "Ausschreibungsbegleitung", "Projekt- und Change-Beratung"] },
     ]
   },
   "/microsoft-365": {
-    eyebrow: "Microsoft 365", title: "Microsoft 365 produktiv, sicher und sauber eingeführt", intro: "Wir gestalten Microsoft 365 so, dass Zusammenarbeit, Sicherheit und Governance im Alltag funktionieren.",
+    eyebrow: "Microsoft 365", title: "Microsoft 365 produktiv, sicher und sauber eingeführt",
+    intro: "Microsoft 365 ist weit mehr als E-Mail und Office. Richtig eingeführt wird es zur zentralen Plattform für Zusammenarbeit, Kommunikation, Dokumentenmanagement und Sicherheit. Wir gestalten Ihre M365-Umgebung mit klarer Governance, durchdachter Berechtigungsstruktur und einer Adoption-Strategie, die Ihre Mitarbeitenden mitnimmt. Von Teams und SharePoint über Exchange Online und OneDrive bis hin zu Power Platform und Copilot – Sie erhalten eine moderne, sichere und produktive Arbeitsumgebung aus einer Hand.",
     sections: [
       { title: "M365 Apps Übersicht", bullets: ["Teams für Kommunikation und Meetings", "Outlook und Exchange Online", "SharePoint als Intranet- und Dokumentenplattform", "OneDrive für sichere Dateien", "Planner und To Do für Aufgaben", "Power Platform für Automatisierung"] },
       { title: "Vorteile", bullets: ["Einheitliche Zusammenarbeit", "Sichere Identitäten", "Mobile Produktivität", "Weniger Schatten-IT"] },
     ]
   },
   "/azure-infrastruktur": {
-    eyebrow: "Azure Infrastruktur", title: "Skalierbare Cloud-Infrastruktur auf Microsoft Azure", intro: "Wir planen, migrieren und betreiben Azure-Umgebungen mit klarer Architektur, Kostenkontrolle und Security by Design.",
+    eyebrow: "Azure Infrastruktur", title: "Skalierbare Cloud-Infrastruktur auf Microsoft Azure",
+    intro: "Mit Microsoft Azure schaffen wir eine flexible, hoch verfügbare und sichere Cloud-Infrastruktur, die exakt zu Ihren Anforderungen passt. Wir planen die Architektur, migrieren bestehende Workloads kontrolliert in die Cloud und betreiben Ihre Umgebung mit klarer Governance, integrierter Security und transparenter Kostenkontrolle. Ob hybride Szenarien, Azure Virtual Desktop, Backup-Lösungen oder vollständige Cloud-Native-Architekturen – wir liefern eine Plattform, die mit Ihrem Geschäft skaliert und gleichzeitig höchste Compliance-Anforderungen erfüllt.",
     sections: [
       { title: "Azure Services", bullets: ["Virtuelle Maschinen und Netzwerke", "Backup und Disaster Recovery", "Azure Virtual Desktop", "Storage und Datenplattformen", "Identity und Conditional Access", "Monitoring und Kostenanalyse"] },
       { title: "Migration-Prozess", steps: ["Assessment", "Zielarchitektur", "Pilotmigration", "Produktivumzug", "Optimierung"] },
     ]
   },
   "/microsoft-intune": {
-    eyebrow: "Microsoft Intune", title: "Geräte sicher verwalten – unabhängig vom Standort", intro: "Mit Intune steuern wir Clients, Smartphones, Compliance und Sicherheitsrichtlinien zentral und nachvollziehbar.",
+    eyebrow: "Microsoft Intune", title: "Geräte sicher verwalten – unabhängig vom Standort",
+    intro: "Microsoft Intune ist die zentrale Plattform, mit der Sie Notebooks, Smartphones und Tablets unabhängig vom Standort verwalten, absichern und mit Anwendungen versorgen. Wir konzipieren Ihre Intune-Umgebung mit durchdachten Compliance-Richtlinien, automatisierter Geräteregistrierung über Windows Autopilot und einer App-Strategie, die Ihren Anwendern alles Wichtige sofort zur Verfügung stellt. So entsteht eine moderne, sichere Arbeitsumgebung – auch im Homeoffice oder unterwegs – mit voller Transparenz über jeden Endpunkt.",
     sections: [
       { title: "Intune Funktionen", bullets: ["Geräteregistrierung und Autopilot", "Compliance-Richtlinien", "App-Verteilung", "Endpoint Security Baselines", "Mobile Device Management", "Reporting und Gerätestatus"] },
-      { title: "Gerätemanagement", text: "Wir standardisieren Endgeräte, reduzieren manuelle Einrichtung und sorgen dafür, dass jedes Gerät den Sicherheitsanforderungen Ihres Unternehmens entspricht." },
+      { title: "Gerätemanagement", text: "Wir standardisieren Endgeräte, reduzieren manuelle Einrichtung und sorgen dafür, dass jedes Gerät den Sicherheitsanforderungen Ihres Unternehmens entspricht. Verlorene Geräte können zentral gesperrt oder gelöscht werden – ohne Eingriff der Anwender." },
     ]
   },
   "/client-management": {
-    eyebrow: "Client Management", title: "Standardisierte Clients für sichere Produktivität", intro: "Wir verwalten Arbeitsplätze über den gesamten Lifecycle – von Beschaffung und Einrichtung bis Patch, Support und Austausch.",
+    eyebrow: "Client Management", title: "Standardisierte Clients für sichere Produktivität",
+    intro: "Professionelles Client Management ist die Grundlage für sichere, produktive Arbeitsplätze. MEXAA-IT begleitet Ihre Clients über den gesamten Lebenszyklus: von der Beschaffung und Standardisierung über die automatisierte Einrichtung mit vorinstallierten Anwendungen bis zu Patch-Management, Sicherheitsüberwachung, Inventarisierung und planmäßigem Austausch. Sie erhalten einheitliche, sichere und schnell einsatzbereite Geräte, eine transparente Übersicht über Ihren Bestand und reduzieren gleichzeitig den Aufwand für Support und Administration deutlich.",
     sections: [{ title: "Client Management Leistungen", bullets: ["Windows Deployment", "Softwareverteilung", "Patch-Management", "Inventarisierung", "Endpoint Protection", "Lifecycle-Planung"] }]
   },
   "/cloud-telefonie": {
-    eyebrow: "Cloud Telefonie", title: "Moderne Telefonie direkt aus der Cloud", intro: "Wir bringen Ihre Kommunikation in Microsoft Teams oder VoIP-Plattformen – flexibel, standortunabhängig und professionell betreut.",
+    eyebrow: "Cloud Telefonie", title: "Moderne Telefonie direkt aus der Cloud",
+    intro: "Mit Cloud Telefonie wird Ihre Geschäftskommunikation flexibel, standortunabhängig und zukunftssicher. Wir integrieren Telefonie direkt in Microsoft Teams oder professionelle VoIP-Plattformen, übernehmen die Rufnummernportierung und gestalten ein durchdachtes Konzept aus Warteschleifen, Rufgruppen und Auto Attendants. Ihre Mitarbeitenden telefonieren komfortabel über ihr Notebook, Smartphone oder ein Tischtelefon – im Büro, zu Hause oder unterwegs. Hardware-Investitionen entfallen, Betriebskosten werden transparent und die Skalierung gelingt ohne Aufwand.",
     sections: [
       { title: "VoIP Vorteile", bullets: ["Telefonieren von überall", "Weniger Hardware vor Ort", "Flexible Rufgruppen", "Einfache Skalierung", "Bessere Integration in Collaboration", "Transparente Betriebskosten"] },
       { title: "Funktionen", bullets: ["Rufnummernportierung", "Warteschleifen", "Auto Attendant", "Headset- und Geräteberatung", "Notrufkonzept", "Monitoring"] },
     ]
   },
   "/ki-loesungen": {
-    eyebrow: "KI-Lösungen", title: "KI sinnvoll einsetzen – sicher, messbar und alltagstauglich", intro: "Wir helfen Unternehmen, Microsoft Copilot und Automatisierung dort einzusetzen, wo echte Entlastung entsteht.",
+    eyebrow: "KI-Lösungen", title: "KI sinnvoll einsetzen – sicher, messbar und alltagstauglich",
+    intro: "Künstliche Intelligenz entfaltet ihren Wert erst dann, wenn sie sicher, kontrolliert und auf konkrete Anwendungsfälle ausgerichtet eingeführt wird. MEXAA-IT begleitet Sie bei der pragmatischen Einführung von Microsoft Copilot, Workflow-Automatisierung und KI-gestützten Geschäftsprozessen. Wir prüfen vorab Datenqualität, Berechtigungen und Compliance-Anforderungen, definieren passende Use Cases und schulen Ihre Mitarbeitenden im verantwortungsvollen Umgang. So wird KI zum messbaren Produktivitätsfaktor – ohne Risiko für Ihre Daten und Prozesse.",
     sections: [
-      { title: "Microsoft Copilot", text: "Wir prüfen Datenqualität, Berechtigungen und Use Cases, bevor Copilot ausgerollt wird. So entsteht Nutzen ohne Kontrollverlust." },
+      { title: "Microsoft Copilot", text: "Wir prüfen Datenqualität, Berechtigungen und Use Cases, bevor Copilot ausgerollt wird. So entsteht Nutzen ohne Kontrollverlust und Ihre Mitarbeitenden lernen, das Werkzeug effektiv und sicher zu nutzen." },
       { title: "KI Automatisierung", bullets: ["Dokumentenprozesse", "E-Mail- und Ticketklassifizierung", "Wissenssuche", "Reporting", "Meeting-Zusammenfassungen", "Workflow-Automatisierung"] },
       { title: "Use Cases", bullets: ["Vertriebsvorbereitung", "HR-Onboarding", "Support-Assistenz", "Management-Reports"] },
     ]
   },
   "/workshops-schulungen": {
-    eyebrow: "Workshops & Schulungen", title: "Schulungen, die Teams wirklich weiterbringen", intro: "Praxisnahe Trainings für moderne Zusammenarbeit, Security Awareness und Microsoft 365 – verständlich, konkret und umsetzbar.",
+    eyebrow: "Workshops & Schulungen", title: "Schulungen, die Teams wirklich weiterbringen",
+    intro: "Technologie entfaltet ihren Wert nur, wenn die Menschen, die sie nutzen, sicher mit ihr umgehen können. Unsere Workshops und Schulungen sind praxisnah, verständlich und auf den konkreten Arbeitsalltag Ihrer Teams zugeschnitten. Wir vermitteln Microsoft 365 Grundlagen, fortgeschrittene Teams- und SharePoint-Nutzung, Security Awareness und die richtige Einführung von Copilot. Jede Schulung wird im Vorfeld auf Ihren Bedarf abgestimmt und endet nicht mit dem letzten Termin – Follow-ups sichern den nachhaltigen Lernerfolg.",
     sections: [
       { title: "Schulungsangebot", bullets: ["Microsoft 365 Grundlagen", "Teams produktiv nutzen", "Security Awareness", "SharePoint Struktur", "Copilot Einführung", "Administrator Workshops"] },
       { title: "Ablauf", steps: ["Bedarf klären", "Agenda abstimmen", "Workshop durchführen", "Follow-up sichern"] },
