@@ -22,6 +22,7 @@ import Karriere from "./pages/subpages/Karriere";
 import SozialesEngagement from "./pages/subpages/SozialesEngagement";
 import Kontakt from "./pages/subpages/Kontakt";
 import Impressum from "./pages/subpages/Impressum";
+import { ScrollToTop } from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +33,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/managed-service" element={<ManagedService />} />
