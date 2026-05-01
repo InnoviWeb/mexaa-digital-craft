@@ -123,11 +123,12 @@ const pageData: Record<string, PageContent> = {
   "/impressum": {
     eyebrow: "Impressum", title: "Angaben gemäß § 5 DDG", intro: "Rechtliche Informationen zur MEXAA-IT GmbH gemäß den gesetzlichen Anforderungen.",
     sections: [
-      { title: "Anbieter", text: "MEXAA-IT GmbH · Homburger Str. 69a · D-61118 Bad Vilbel · Handelsregister: HRB 117429 · Registergericht: Amtsgericht Bad Vilbel" },
-      { title: "Vertretungsberechtigt", text: "Geschäftsführer: Mehmet Aggün" },
+      { title: "MEXAA-IT GmbH", bullets: ["Homburger Str. 69a", "D-61118 Bad Vilbel"] },
+      { title: "Handelsregister", bullets: ["Handelsregister: HRB 117429", "Registergericht: Amtsgericht Bad Vilbel"] },
+      { title: "Vertreten durch", text: "Mehmet Aggün" },
       { title: "Kontakt", bullets: ["Telefon: +49 6101 596 9082", "E-Mail: info@mexaa.de"] },
       { title: "Umsatzsteuer", text: "Umsatzsteuer-Identifikationsnummer nach §27a Umsatzsteuergesetz: DE32 8347185" },
-      { title: "Webdesign und Realisierung", text: "MEXAA-IT GmbH" },
+      { title: "Webdesign und Realisierung von", text: "MEXAA-IT GmbH" },
     ]
   },
   "/karriere": {
