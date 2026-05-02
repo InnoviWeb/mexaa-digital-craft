@@ -117,6 +117,10 @@ export default {
           "0%": { opacity: "0", transform: "scale(.92)" },
           "100%": { opacity: "1", transform: "scale(1)" },
         },
+        marquee: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-33.3333%)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -125,6 +129,7 @@ export default {
         "float-soft": "float-soft 6s ease-in-out infinite",
         "draw-line": "draw-line 7s linear infinite alternate",
         "count-pop": "count-pop .7s cubic-bezier(.22,1,.36,1) both",
+        marquee: "marquee 35s linear infinite",
       },
     },
   },
