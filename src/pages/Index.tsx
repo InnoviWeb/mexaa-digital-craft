@@ -107,11 +107,8 @@ const Index = () => (
       </div>
     </section>
 
-    <section className="bg-background py-8 shadow-sm" aria-label="Vertrauenssignale">
-      <div className="mx-auto grid max-w-[1200px] gap-5 px-6 text-center text-xs font-black uppercase tracking-[0.16em] text-trust sm:grid-cols-2 sm:text-sm lg:grid-cols-4">
-        {['Microsoft Partner', 'Google ★★★★★ 5.0', 'ISO 27001', 'DSGVO konform'].map((item) => <div key={item}>{item}</div>)}
-      </div>
-    </section>
+    <PartnerMarquee />
+
 
     <section className="bg-background px-6 py-[100px]">
       <div className="mx-auto max-w-[1200px] text-center section-reveal">
