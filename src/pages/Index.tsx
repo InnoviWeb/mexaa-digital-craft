@@ -1,9 +1,11 @@
+import { useState } from "react";
 import { ArrowRight, Mail, MonitorCheck, Network, ShieldCheck, Sparkles, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import serverRoom from "@/assets/mexaa-server-room.jpg";
 import drDinger from "@/assets/dr-helmut-dinger.avif";
 import { Footer, Navigation } from "@/components/MexaaLayout";
 import { FaqSection, ReasonsForMexaa, WhyMexaa } from "@/components/MexaaSections";
+import { PartnerMarquee } from "@/components/PartnerMarquee";
 import { itServices, serviceIcons, solutions } from "@/components/mexaaData";
 
 const ParticleNetwork = () => (
