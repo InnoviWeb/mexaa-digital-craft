@@ -23,6 +23,7 @@ import SozialesEngagement from "./pages/subpages/SozialesEngagement";
 import Kontakt from "./pages/subpages/Kontakt";
 import Impressum from "./pages/subpages/Impressum";
 import { ScrollToTop } from "./components/ScrollToTop";
+import { SplashScreen } from "./components/SplashScreen";
 
 const queryClient = new QueryClient();
 
