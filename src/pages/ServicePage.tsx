@@ -169,10 +169,10 @@ const pageData: Record<string, PageContent> = {
 type PageKey = keyof typeof pageData;
 
 const Hero = ({ eyebrow, title, intro }: { eyebrow: string; title: string; intro: string }) => (
-  <section className="relative overflow-hidden bg-hero px-6 pt-36 text-hero-foreground">
+  <section className="relative overflow-hidden bg-hero px-6 pt-28 text-hero-foreground md:pt-36">
     <img src={serverRoom} alt="Professionelle IT-Infrastruktur im Rechenzentrum" width={1920} height={1088} className="absolute inset-0 h-full w-full object-cover" />
     <div className="absolute inset-0 bg-readable-hero" />
-    <div className="relative mx-auto max-w-[1200px] py-[100px]">
+    <div className="relative mx-auto max-w-[1200px] py-16 md:py-[100px]">
       <div className="max-w-3xl animate-fade-up">
         <div className="mb-6 inline-flex items-center gap-3 rounded-md border border-primary-foreground/20 bg-primary-foreground/10 px-4 py-2 text-sm font-extrabold backdrop-blur-xl"><Sparkles className="h-4 w-4 text-accent" /> {eyebrow}</div>
         <h1 className="text-[32px] font-black leading-[1.1] tracking-[-0.03em] text-hero-foreground sm:text-[44px] md:text-[58px] lg:text-[64px]">{title}</h1>
