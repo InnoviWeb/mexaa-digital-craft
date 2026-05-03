@@ -172,7 +172,7 @@ const Hero = ({ eyebrow, title, intro }: { eyebrow: string; title: string; intro
   <section className="relative overflow-hidden bg-hero px-6 pt-28 text-hero-foreground md:pt-36">
     <img src={serverRoom} alt="Professionelle IT-Infrastruktur im Rechenzentrum" width={1920} height={1088} className="absolute inset-0 h-full w-full object-cover" />
     <div className="absolute inset-0 bg-readable-hero" />
-    <div className="relative mx-auto max-w-[1200px] py-16 md:py-[100px]">
+    <div className="relative mx-auto max-w-[1200px] py-16 md:py-16 md:py-[100px]">
       <div className="max-w-3xl animate-fade-up">
         <div className="mb-6 inline-flex items-center gap-3 rounded-md border border-primary-foreground/20 bg-primary-foreground/10 px-4 py-2 text-sm font-extrabold backdrop-blur-xl"><Sparkles className="h-4 w-4 text-accent" /> {eyebrow}</div>
         <h1 className="text-[32px] font-black leading-[1.1] tracking-[-0.03em] text-hero-foreground sm:text-[44px] md:text-[58px] lg:text-[64px]">{title}</h1>
@@ -183,7 +183,7 @@ const Hero = ({ eyebrow, title, intro }: { eyebrow: string; title: string; intro
 );
 
 const ContactCta = () => (
-  <section className="bg-background px-6 py-[100px]">
+  <section className="bg-background px-6 py-16 md:py-[100px]">
     <div className="mx-auto max-w-[1200px]">
       <div className="flex flex-col items-start justify-between gap-8 rounded-2xl bg-hero p-10 text-hero-foreground shadow-lift md:flex-row md:items-center md:p-14">
         <div className="max-w-2xl">
@@ -197,7 +197,7 @@ const ContactCta = () => (
 );
 
 const ContentSection = ({ section }: { section: any }) => (
-  <section className="bg-background px-6 py-16 even:bg-secondary md:py-[100px]">
+  <section className="bg-background px-6 py-16 even:bg-secondary md:py-16 md:py-[100px]">
     <div className="mx-auto max-w-[1200px] animate-fade-up">
       <h2 className="text-[26px] font-extrabold leading-tight text-section-title sm:text-[32px] md:text-[40px]">{section.title}</h2>
       {section.text && <p className="mt-5 max-w-3xl text-base leading-7 text-muted-foreground md:mt-6 md:text-lg md:leading-8">{section.text}</p>}
@@ -220,7 +220,7 @@ const ContactPage = () => {
     else setErrors({});
   };
   return <PageShell><Hero eyebrow="Kontakt" title="Sprechen wir über Ihre IT-Ziele" intro="Ob Beratung, Support oder konkretes Projekt: Wir melden uns schnell und mit einer klaren nächsten Empfehlung." />
-    <section className="bg-background px-6 py-[100px]"><div className="mx-auto grid max-w-[1200px] gap-10 lg:grid-cols-[1.1fr_.9fr]">
+    <section className="bg-background px-6 py-16 md:py-[100px]"><div className="mx-auto grid max-w-[1200px] gap-10 lg:grid-cols-[1.1fr_.9fr]">
       <form onSubmit={submit} className="rounded-md border border-border bg-card p-8 shadow-lift"><div className="grid gap-5 md:grid-cols-2">{[["name","Name"],["firma","Firma"],["email","Email"],["telefon","Telefon"]].map(([n,l]) => <label key={n} className="text-sm font-bold">{l}<input name={n} className="mt-2 w-full rounded-md border border-input bg-background px-4 py-3 outline-none focus:ring-2 focus:ring-ring" />{errors[n] && <span className="mt-1 block text-xs text-destructive">{errors[n]}</span>}</label>)}<label className="text-sm font-bold md:col-span-2">Betreff<select name="betreff" className="mt-2 w-full rounded-md border border-input bg-background px-4 py-3 outline-none focus:ring-2 focus:ring-ring"><option value="">Bitte wählen</option><option>Managed Service</option><option>Cloud Projekt</option><option>Support Anfrage</option><option>Karriere</option></select>{errors.betreff && <span className="mt-1 block text-xs text-destructive">{errors.betreff}</span>}</label><label className="text-sm font-bold md:col-span-2">Nachricht<textarea name="nachricht" rows={6} className="mt-2 w-full rounded-md border border-input bg-background px-4 py-3 outline-none focus:ring-2 focus:ring-ring" />{errors.nachricht && <span className="mt-1 block text-xs text-destructive">{errors.nachricht}</span>}</label></div><label className="mt-5 flex gap-3 text-sm text-muted-foreground"><input name="dsgvo" type="checkbox" className="mt-1" /> Ich stimme der Verarbeitung meiner Angaben zur Kontaktaufnahme zu.</label>{errors.dsgvo && <span className="mt-1 block text-xs text-destructive">Bitte stimmen Sie zu.</span>}<button className="mt-7 rounded-md bg-primary px-7 py-4 font-black text-primary-foreground shadow-glow transition hover:-translate-y-1">Anfrage senden</button></form>
       <aside className="rounded-md bg-hero p-8 text-hero-foreground shadow-lift"><h2 className="text-[40px] font-extrabold">Direkter Kontakt</h2><div className="mt-8 space-y-5 text-hero-foreground/75"><p><strong className="block text-hero-foreground">Adresse</strong>MEXAA-IT GmbH · Homburger Str. 69a · 61118 Bad Vilbel</p><p><strong className="block text-hero-foreground">Telefon</strong>+49 6101 596 9082</p><p className="flex gap-3"><Mail className="h-5 w-5 text-primary" /> info@mexaa.de</p><p className="flex gap-3"><Clock className="h-5 w-5 text-primary" /> Öffnungszeiten: Mo–Fr 08:00–18:00 Uhr</p><p className="flex gap-3"><ShieldCheck className="h-5 w-5 text-primary" /> Sichere Fernwartung nach ausdrücklicher Freigabe</p></div><a href={FERNWARTUNG_URL} target="_blank" rel="noreferrer" className="mt-8 inline-flex rounded-md border border-primary-foreground/20 px-5 py-3 font-black transition hover:bg-primary">Fernwartung starten</a></aside>
     </div></section></PageShell>;
@@ -230,9 +230,9 @@ export const GenericPage = ({ path }: { path: string }) => {
   if (path === "/kontakt") return <ContactPage />;
   const page = pageData[path] ?? pageData["/managed-service"];
   return <PageShell><Hero eyebrow={page.eyebrow} title={page.title} intro={page.intro} />
-    {page.stats && <section className="bg-hero px-6 py-[100px] text-hero-foreground"><div className="mx-auto grid max-w-[1200px] gap-6 text-center sm:grid-cols-2 lg:grid-cols-4">{page.stats.map(([n,l]) => <div key={l} className="rounded-md border border-primary-foreground/10 bg-primary-foreground/10 p-7 backdrop-blur"><div className="text-5xl font-black text-primary">{n}</div><div className="mt-3 font-bold text-hero-foreground/70">{l}</div></div>)}</div></section>}
+    {page.stats && <section className="bg-hero px-6 py-16 md:py-[100px] text-hero-foreground"><div className="mx-auto grid max-w-[1200px] gap-6 text-center sm:grid-cols-2 lg:grid-cols-4">{page.stats.map(([n,l]) => <div key={l} className="rounded-md border border-primary-foreground/10 bg-primary-foreground/10 p-7 backdrop-blur"><div className="text-5xl font-black text-primary">{n}</div><div className="mt-3 font-bold text-hero-foreground/70">{l}</div></div>)}</div></section>}
     {page.sections.map((section) => <ContentSection key={section.title} section={section} />)}
-    {page.table && <section className="bg-secondary px-6 py-[100px]"><div className="mx-auto max-w-[1200px]"><h2 className="text-[40px] font-extrabold text-section-title">Reaktionszeiten-Tabelle</h2><div className="mt-8 overflow-hidden rounded-md border border-border bg-card shadow-sm">{page.table.map((r) => <div key={r[0]} className="grid grid-cols-3 border-b border-border p-4 last:border-0"><strong>{r[0]}</strong><span>{r[1]}</span><span className="text-muted-foreground">{r[2]}</span></div>)}</div></div></section>}
+    {page.table && <section className="bg-secondary px-6 py-16 md:py-[100px]"><div className="mx-auto max-w-[1200px]"><h2 className="text-[40px] font-extrabold text-section-title">Reaktionszeiten-Tabelle</h2><div className="mt-8 overflow-hidden rounded-md border border-border bg-card shadow-sm">{page.table.map((r) => <div key={r[0]} className="grid grid-cols-3 border-b border-border p-4 last:border-0"><strong>{r[0]}</strong><span>{r[1]}</span><span className="text-muted-foreground">{r[2]}</span></div>)}</div></div></section>}
     <FaqSection faqs={getFaqsForPath(path)} />
     <ContactCta />
   </PageShell>;

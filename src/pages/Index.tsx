@@ -53,7 +53,7 @@ const ServicesShowcase = () => {
   const itList = itServices.map((s, i) => ({ ...s, Icon: serviceIcons[i % serviceIcons.length] }));
   const solList = solutions.map((s, i) => ({ ...s, Icon: serviceIcons[(i + 3) % serviceIcons.length] }));
   return (
-    <section id="services" className="relative bg-secondary px-6 py-[100px]">
+    <section id="services" className="relative bg-secondary px-6 py-16 md:py-[100px]">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
       <div className="mx-auto max-w-[1200px]">
         <div className="mx-auto mb-14 max-w-3xl text-center">
@@ -115,7 +115,7 @@ const Index = () => (
     <PartnerMarquee />
 
 
-    <section className="bg-background px-6 py-[100px]">
+    <section className="bg-background px-6 py-16 md:py-[100px]">
       <div className="mx-auto max-w-[1200px] text-center section-reveal">
         <h2 className="text-[34px] font-extrabold leading-tight text-primary md:text-[40px]">Ihre IT – sicher, effizient und sorgenfrei</h2>
         <p className="mx-auto mt-6 max-w-3xl text-base leading-7 text-muted-foreground md:text-lg md:leading-8">Wir verbinden strategische Beratung mit operativer Exzellenz – damit Ihre IT nicht bremst, sondern Ihr Wachstum zuverlässig trägt.</p>
@@ -140,7 +140,7 @@ const Index = () => (
 
     <ServicesShowcase />
 
-    <section className="bg-background px-6 py-[100px]">
+    <section className="bg-background px-6 py-16 md:py-[100px]">
       <div className="mx-auto max-w-[1100px]">
         <div className="grid gap-10 rounded-3xl border border-border bg-card p-8 shadow-lift md:grid-cols-[1fr_280px] md:p-12">
           <div className="relative">
@@ -171,7 +171,7 @@ const Index = () => (
 
     <FaqSection />
 
-    <section id="contact" className="bg-hero px-6 py-[100px] text-center text-hero-foreground">
+    <section id="contact" className="bg-hero px-6 py-16 md:py-[100px] text-center text-hero-foreground">
       <div className="mx-auto max-w-[1200px]">
         <h2 className="text-[34px] font-extrabold leading-tight text-hero-foreground md:text-[40px]">Bereit für Ihre digitale Transformation?</h2>
         <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-hero-foreground/75 md:text-lg md:leading-8">Sprechen wir über Ihre Ziele, Risiken und nächsten Schritte. In einem unverbindlichen Erstgespräch erhalten Sie eine klare Einschätzung für Ihre IT-Roadmap.</p>

@@ -16,7 +16,7 @@ const reasons = [
 ];
 
 export const WhyMexaa = () => (
-  <section className="relative overflow-hidden bg-background px-6 py-[100px]">
+  <section className="relative overflow-hidden bg-background px-6 py-16 md:py-[100px]">
     <div className="pointer-events-none absolute -left-32 top-1/3 h-96 w-96 rounded-full bg-primary/5 blur-3xl" />
     <div className="pointer-events-none absolute -right-32 bottom-0 h-96 w-96 rounded-full bg-accent/10 blur-3xl" />
     <div className="relative mx-auto max-w-[1200px]">
@@ -41,7 +41,7 @@ export const WhyMexaa = () => (
 );
 
 export const ReasonsForMexaa = () => (
-  <section className="relative overflow-hidden bg-hero px-6 py-[100px] text-hero-foreground">
+  <section className="relative overflow-hidden bg-hero px-6 py-16 md:py-[100px] text-hero-foreground">
     <div className="pointer-events-none absolute inset-0 opacity-40" style={{ backgroundImage: "radial-gradient(circle at 20% 20%, hsl(var(--primary)/.4), transparent 40%), radial-gradient(circle at 80% 80%, hsl(var(--accent)/.25), transparent 40%)" }} />
     <div className="relative mx-auto max-w-[1200px]">
       <div className="mx-auto max-w-3xl text-center">
@@ -76,7 +76,7 @@ const defaultFaqs: Array<{ q: string; a: string }> = [
 ];
 
 export const FaqSection = ({ faqs = defaultFaqs }: { faqs?: Array<{ q: string; a: string }> }) => (
-  <section className="bg-secondary px-6 py-[100px]">
+  <section className="bg-secondary px-6 py-16 md:py-[100px]">
     <div className="mx-auto max-w-[1200px]">
       <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
         <aside className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-hero via-hero to-primary/40 p-8 text-hero-foreground shadow-lift md:p-10">
