@@ -8,6 +8,10 @@ export const FERNWARTUNG_URL = "https://mexaa.islonline.net/users/main/join.html
 
 export const Navigation = () => {
   const [open, setOpen] = useState(false);
+  useState(() => {});
+  if (typeof document !== "undefined") {
+    document.body.style.overflow = open ? "hidden" : "";
+  }
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-border bg-background/90 backdrop-blur-2xl shadow-sm">
       <nav className="mx-auto flex h-20 max-w-[1200px] items-center justify-between px-6" aria-label="Hauptnavigation">
