@@ -33,9 +33,9 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <SplashScreen />
       <BrowserRouter>
         <ScrollToTop />
+        <SplashScreen />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/managed-service" element={<ManagedService />} />

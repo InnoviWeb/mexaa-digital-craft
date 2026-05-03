@@ -53,14 +53,14 @@ const ServicesShowcase = () => {
   const itList = itServices.map((s, i) => ({ ...s, Icon: serviceIcons[i % serviceIcons.length] }));
   const solList = solutions.map((s, i) => ({ ...s, Icon: serviceIcons[(i + 3) % serviceIcons.length] }));
   return (
-    <section id="services" className="relative bg-secondary px-6 py-[100px]">
+    <section id="services" className="relative bg-secondary px-6 py-16 md:py-[100px]">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
       <div className="mx-auto max-w-[1200px]">
         <div className="mx-auto mb-14 max-w-3xl text-center">
           <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-xs font-black uppercase tracking-[0.22em] text-primary">
             Leistungen
           </div>
-          <h2 className="text-[34px] font-extrabold leading-tight text-section-title md:text-[44px]">
+          <h2 className="text-[26px] sm:text-[32px] font-extrabold leading-tight text-section-title md:text-[44px]">
             Alles, was Ihre IT braucht – aus einer Hand
           </h2>
         </div>
@@ -102,8 +102,8 @@ const Index = () => (
       <div className="relative z-10 mx-auto flex min-h-[88vh] max-w-[1200px] items-center px-6 pb-20 pt-32">
         <div className="max-w-3xl text-left section-reveal">
           <div className="mb-8 inline-flex items-center gap-3 rounded-md border border-primary-foreground/20 bg-primary-foreground/10 px-4 py-2 text-sm font-extrabold text-hero-foreground shadow-glass backdrop-blur-xl"><Sparkles className="h-4 w-4 text-accent" /> MEXAA-IT · think for results!</div>
-          <h1 className="text-[40px] font-black leading-[1.05] tracking-[-0.03em] text-hero-foreground sm:text-[52px] md:text-[64px]">Gemeinsam die digitale Zukunft gestalten</h1>
-          <p className="mt-8 max-w-2xl text-base font-medium leading-7 text-hero-foreground/85 sm:text-lg sm:leading-8 md:text-xl">MEXAA-IT GmbH entwickelt, betreibt und schützt moderne IT-Landschaften für Unternehmen, die zuverlässige Systeme, klare Prozesse und messbare Ergebnisse erwarten.</p>
+          <h1 className="text-[30px] font-black leading-[1.1] tracking-[-0.03em] text-hero-foreground sm:text-[44px] md:text-[58px] lg:text-[64px]">Gemeinsam die digitale Zukunft gestalten</h1>
+          <p className="mt-6 max-w-2xl text-sm font-medium leading-6 text-hero-foreground/85 sm:text-base sm:leading-7 md:text-lg md:leading-8">MEXAA-IT GmbH entwickelt, betreibt und schützt moderne IT-Landschaften für Unternehmen, die zuverlässige Systeme, klare Prozesse und messbare Ergebnisse erwarten.</p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <Link to="/kontakt" className="inline-flex items-center justify-center gap-2 rounded-md bg-primary px-7 py-4 text-base font-black text-primary-foreground shadow-glow transition hover:-translate-y-1 hover:shadow-lift">Beratung anfragen <ArrowRight className="h-5 w-5" /></Link>
             <Link to="/managed-service" className="inline-flex items-center justify-center gap-2 rounded-md border border-primary-foreground/20 bg-primary-foreground/10 px-7 py-4 text-base font-black text-hero-foreground backdrop-blur-xl transition hover:-translate-y-1 hover:bg-primary-foreground/16">Leistungen entdecken</Link>
@@ -115,9 +115,9 @@ const Index = () => (
     <PartnerMarquee />
 
 
-    <section className="bg-background px-6 py-[100px]">
+    <section className="bg-background px-6 py-16 md:py-[100px]">
       <div className="mx-auto max-w-[1200px] text-center section-reveal">
-        <h2 className="text-[34px] font-extrabold leading-tight text-primary md:text-[40px]">Ihre IT – sicher, effizient und sorgenfrei</h2>
+        <h2 className="text-[26px] sm:text-[32px] font-extrabold leading-tight text-primary md:text-[40px]">Ihre IT – sicher, effizient und sorgenfrei</h2>
         <p className="mx-auto mt-6 max-w-3xl text-base leading-7 text-muted-foreground md:text-lg md:leading-8">Wir verbinden strategische Beratung mit operativer Exzellenz – damit Ihre IT nicht bremst, sondern Ihr Wachstum zuverlässig trägt.</p>
         <div className="mt-16 grid gap-6 md:grid-cols-3">
           {[[ShieldCheck, 'Flexible IT-Flatrates', 'Transparente Leistungen, kalkulierbare Kosten und ein Serviceumfang, der zu Ihrem Unternehmen passt.'], [MonitorCheck, 'Proaktives Monitoring', 'Wir erkennen Risiken frühzeitig, bevor Ausfälle entstehen oder Produktivität verloren geht.'], [Network, 'Persönliche Betreuung', 'Direkte Ansprechpartner, klare Kommunikation und Entscheidungen auf Augenhöhe.']].map(([Icon, title, text]) => {
@@ -140,7 +140,7 @@ const Index = () => (
 
     <ServicesShowcase />
 
-    <section className="bg-background px-6 py-[100px]">
+    <section className="bg-background px-6 py-16 md:py-[100px]">
       <div className="mx-auto max-w-[1100px]">
         <div className="grid gap-10 rounded-3xl border border-border bg-card p-8 shadow-lift md:grid-cols-[1fr_280px] md:p-12">
           <div className="relative">
@@ -171,9 +171,9 @@ const Index = () => (
 
     <FaqSection />
 
-    <section id="contact" className="bg-hero px-6 py-[100px] text-center text-hero-foreground">
+    <section id="contact" className="bg-hero px-6 py-16 md:py-[100px] text-center text-hero-foreground">
       <div className="mx-auto max-w-[1200px]">
-        <h2 className="text-[34px] font-extrabold leading-tight text-hero-foreground md:text-[40px]">Bereit für Ihre digitale Transformation?</h2>
+        <h2 className="text-[26px] sm:text-[32px] font-extrabold leading-tight text-hero-foreground md:text-[40px]">Bereit für Ihre digitale Transformation?</h2>
         <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-hero-foreground/75 md:text-lg md:leading-8">Sprechen wir über Ihre Ziele, Risiken und nächsten Schritte. In einem unverbindlichen Erstgespräch erhalten Sie eine klare Einschätzung für Ihre IT-Roadmap.</p>
         <Link to="/kontakt" className="mt-10 inline-flex items-center gap-2 rounded-md bg-primary px-8 py-4 text-base font-black text-primary-foreground shadow-glow transition hover:-translate-y-1 hover:shadow-lift">
           <Mail className="h-5 w-5" /> Kontakt aufnehmen

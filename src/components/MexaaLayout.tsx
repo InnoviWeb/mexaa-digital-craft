@@ -1,5 +1,5 @@
 import { ArrowRight, ChevronDown, Linkedin, Mail, MapPin, Menu, Phone, X } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/mexaa-logo.png";
 import { itServices, navGroups, solutions } from "./mexaaData";
@@ -8,6 +8,12 @@ export const FERNWARTUNG_URL = "https://mexaa.islonline.net/users/main/join.html
 
 export const Navigation = () => {
   const [open, setOpen] = useState(false);
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-border bg-background/90 backdrop-blur-2xl shadow-sm">
       <nav className="mx-auto flex h-20 max-w-[1200px] items-center justify-between px-6" aria-label="Hauptnavigation">
@@ -45,7 +51,7 @@ export const Navigation = () => {
       </nav>
       {open && (
         <div className="border-t border-border bg-background lg:hidden">
-          <div className="mx-auto max-w-[1200px] px-6 py-4">
+          <div className="mx-auto max-h-[calc(100vh-5rem)] max-w-[1200px] overflow-y-auto overscroll-contain px-6 py-4 pb-8">
             {navGroups.map((group) => (
               <div key={group.title} className="border-b border-border py-3 last:border-0">
                 <div className="mb-2 text-xs font-black uppercase tracking-wider text-muted-foreground">{group.title}</div>

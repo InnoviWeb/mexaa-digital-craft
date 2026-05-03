@@ -16,12 +16,12 @@ const reasons = [
 ];
 
 export const WhyMexaa = () => (
-  <section className="relative overflow-hidden bg-background px-6 py-[100px]">
+  <section className="relative overflow-hidden bg-background px-6 py-16 md:py-[100px]">
     <div className="pointer-events-none absolute -left-32 top-1/3 h-96 w-96 rounded-full bg-primary/5 blur-3xl" />
     <div className="pointer-events-none absolute -right-32 bottom-0 h-96 w-96 rounded-full bg-accent/10 blur-3xl" />
     <div className="relative mx-auto max-w-[1200px]">
       <div className="text-center">
-        <h2 className="text-[34px] font-extrabold leading-tight text-section-title md:text-[44px]">Ihr IT-Partner für innovative<br className="hidden md:block" /> und wachsende Unternehmen</h2>
+        <h2 className="text-[26px] sm:text-[32px] font-extrabold leading-tight text-section-title md:text-[44px]">Ihr IT-Partner für innovative<br className="hidden md:block" /> und wachsende Unternehmen</h2>
         <p className="mx-auto mt-6 max-w-3xl text-base leading-7 text-muted-foreground md:text-lg md:leading-8">Unser Anspruch ist es, der beste IT-Dienstleister in Hessen zu werden. Höchste Qualität, Zuverlässigkeit und Kundenorientierung – damit komplexe Projekte erfolgreich werden.</p>
       </div>
       <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -41,12 +41,12 @@ export const WhyMexaa = () => (
 );
 
 export const ReasonsForMexaa = () => (
-  <section className="relative overflow-hidden bg-hero px-6 py-[100px] text-hero-foreground">
+  <section className="relative overflow-hidden bg-hero px-6 py-16 md:py-[100px] text-hero-foreground">
     <div className="pointer-events-none absolute inset-0 opacity-40" style={{ backgroundImage: "radial-gradient(circle at 20% 20%, hsl(var(--primary)/.4), transparent 40%), radial-gradient(circle at 80% 80%, hsl(var(--accent)/.25), transparent 40%)" }} />
     <div className="relative mx-auto max-w-[1200px]">
       <div className="mx-auto max-w-3xl text-center">
         <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-primary-foreground/20 bg-primary-foreground/10 px-4 py-1.5 text-xs font-black uppercase tracking-[0.22em] text-hero-foreground/80"><Award className="h-3.5 w-3.5 text-accent" /> Unsere Stärken</div>
-        <h2 className="text-[34px] font-extrabold leading-tight md:text-[44px]">Gründe, die für MEXAA-IT als Dienstleister sprechen</h2>
+        <h2 className="text-[26px] sm:text-[32px] font-extrabold leading-tight md:text-[44px]">Gründe, die für MEXAA-IT als Dienstleister sprechen</h2>
       </div>
       <div className="mt-14 grid gap-6 md:grid-cols-2">
         {reasons.map((r) => (
@@ -76,7 +76,7 @@ const defaultFaqs: Array<{ q: string; a: string }> = [
 ];
 
 export const FaqSection = ({ faqs = defaultFaqs }: { faqs?: Array<{ q: string; a: string }> }) => (
-  <section className="bg-secondary px-6 py-[100px]">
+  <section className="bg-secondary px-6 py-16 md:py-[100px]">
     <div className="mx-auto max-w-[1200px]">
       <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
         <aside className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-hero via-hero to-primary/40 p-8 text-hero-foreground shadow-lift md:p-10">
