@@ -47,7 +47,9 @@ const pageData: Record<string, PageContent> = {
     sections: [
       { title: "Rollout-Prozess", steps: ["Analyse", "Pilotierung", "Paketierung", "Ausführung", "Abnahme"] },
       { title: "Leistungen", bullets: ["Client- und Notebook-Rollouts", "Microsoft 365 Migrationen", "Standort- und Netzwerkumzüge", "Image- und Softwareverteilung", "Benutzereinweisung", "Abschlussdokumentation"] },
-    ]
+      { title: "Vorteile für Ihr Unternehmen", text: "Wir minimieren Stillstandzeiten durch eine durchdachte Projektorganisation, klare Eskalationswege und ein erfahrenes Rollout-Team. Mitarbeitende erhalten vorkonfigurierte Geräte, klare Anleitungen und persönliche Unterstützung am Stichtag – damit der Wechsel reibungslos gelingt." },
+      { title: "Was wir mitbringen", cards: [["Projektmanagement", "Erfahrene Projektleitung mit klarer Kommunikation, Statusberichten und Risikomanagement."], ["Logistik & Imaging", "Vorkonfiguration, Verpackung und Versand Ihrer Geräte – auch bundesweit."], ["Vor-Ort-Teams", "Geschultes Personal an jedem Standort für Aufbau, Migration und Übergabe."]] },
+    ], stats: [["1000+", "Geräte/Jahr"], ["98%", "On-Time"], ["0", "Datenverluste"], ["5", "Phasen"]]
   },
   "/it-beratung": {
     eyebrow: "IT-Beratung", title: "Strategische IT-Beratung mit Blick auf Ergebnisse",
@@ -55,6 +57,8 @@ const pageData: Record<string, PageContent> = {
     sections: [
       { title: "Unser Beratungsansatz", text: "Wir analysieren Systeme, Risiken, Kosten und Prozesse. Daraus entstehen priorisierte Maßnahmen, klare Entscheidungsgrundlagen und ein realistischer Umsetzungsplan. Unsere Beratung ist immer ergebnisorientiert – mit messbarem Mehrwert für Ihr Unternehmen." },
       { title: "Leistungen", bullets: ["IT-Audit und Reifegradanalyse", "Cloud- und Security-Strategie", "Lizenz- und Kostenoptimierung", "Modern Workplace Konzepte", "Ausschreibungsbegleitung", "Projekt- und Change-Beratung"] },
+      { title: "Vorgehen", steps: ["Kick-off", "Analyse", "Workshops", "Roadmap", "Umsetzung"] },
+      { title: "Ihre Vorteile", cards: [["Unabhängige Beratung", "Hersteller- und reselleroffen, ausschließlich an Ihrem Bedarf orientiert."], ["Klare Entscheidungsgrundlagen", "Priorisierte Maßnahmen, Business-Cases und realistische Aufwandsschätzungen."], ["Umsetzungsstärke", "Wir begleiten nicht nur die Strategie, sondern auch die operative Umsetzung."]] },
     ]
   },
   "/microsoft-365": {
@@ -62,8 +66,10 @@ const pageData: Record<string, PageContent> = {
     intro: "Microsoft 365 ist weit mehr als E-Mail und Office. Richtig eingeführt wird es zur zentralen Plattform für Zusammenarbeit, Kommunikation, Dokumentenmanagement und Sicherheit. Wir gestalten Ihre M365-Umgebung mit klarer Governance, durchdachter Berechtigungsstruktur und einer Adoption-Strategie, die Ihre Mitarbeitenden mitnimmt. Von Teams und SharePoint über Exchange Online und OneDrive bis hin zu Power Platform und Copilot – Sie erhalten eine moderne, sichere und produktive Arbeitsumgebung aus einer Hand.",
     sections: [
       { title: "M365 Apps Übersicht", bullets: ["Teams für Kommunikation und Meetings", "Outlook und Exchange Online", "SharePoint als Intranet- und Dokumentenplattform", "OneDrive für sichere Dateien", "Planner und To Do für Aufgaben", "Power Platform für Automatisierung"] },
-      { title: "Vorteile", bullets: ["Einheitliche Zusammenarbeit", "Sichere Identitäten", "Mobile Produktivität", "Weniger Schatten-IT"] },
-    ]
+      { title: "Governance & Sicherheit", text: "Wir definieren Berechtigungsmodelle, Conditional Access, MFA und Datenschutzrichtlinien, damit Microsoft 365 nicht zur Schatten-IT wird. Sensible Informationen bleiben geschützt, ohne die Produktivität Ihrer Teams zu bremsen." },
+      { title: "Einführungsprozess", steps: ["Assessment", "Konzept", "Pilot", "Rollout", "Adoption"] },
+      { title: "Vorteile", bullets: ["Einheitliche Zusammenarbeit", "Sichere Identitäten", "Mobile Produktivität", "Weniger Schatten-IT", "Skalierbar und zukunftssicher", "Integration mit Copilot"] },
+    ], stats: [["100%", "Cloud-native"], ["MFA", "Pflicht"], ["365", "Tage Support"], ["1", "Plattform"]]
   },
   "/azure-infrastruktur": {
     eyebrow: "Azure Infrastruktur", title: "Skalierbare Cloud-Infrastruktur auf Microsoft Azure",
@@ -71,7 +77,9 @@ const pageData: Record<string, PageContent> = {
     sections: [
       { title: "Azure Services", bullets: ["Virtuelle Maschinen und Netzwerke", "Backup und Disaster Recovery", "Azure Virtual Desktop", "Storage und Datenplattformen", "Identity und Conditional Access", "Monitoring und Kostenanalyse"] },
       { title: "Migration-Prozess", steps: ["Assessment", "Zielarchitektur", "Pilotmigration", "Produktivumzug", "Optimierung"] },
-    ]
+      { title: "Sicherheit & Compliance", text: "Wir implementieren Azure-Sicherheitsbaselines, Defender for Cloud und Conditional Access. Daten werden verschlüsselt gespeichert und übertragen, Zugriffe werden granular gesteuert und protokolliert – DSGVO-konform und auditierbar." },
+      { title: "Ihre Vorteile", cards: [["Hochverfügbarkeit", "Geo-redundante Architekturen mit definierten SLAs und Failover-Strategien."], ["Kostenkontrolle", "Reservierungen, Auto-Scaling und Tagging sorgen für transparente, planbare Cloud-Kosten."], ["Skalierung on demand", "Ressourcen wachsen mit Ihrem Geschäft – ohne neue Hardware oder Wartezeiten."]] },
+    ], stats: [["99.99%", "SLA"], ["DSGVO", "konform"], ["DE", "Region"], ["24/7", "Monitoring"]]
   },
   "/microsoft-intune": {
     eyebrow: "Microsoft Intune", title: "Geräte sicher verwalten – unabhängig vom Standort",
@@ -79,12 +87,18 @@ const pageData: Record<string, PageContent> = {
     sections: [
       { title: "Intune Funktionen", bullets: ["Geräteregistrierung und Autopilot", "Compliance-Richtlinien", "App-Verteilung", "Endpoint Security Baselines", "Mobile Device Management", "Reporting und Gerätestatus"] },
       { title: "Gerätemanagement", text: "Wir standardisieren Endgeräte, reduzieren manuelle Einrichtung und sorgen dafür, dass jedes Gerät den Sicherheitsanforderungen Ihres Unternehmens entspricht. Verlorene Geräte können zentral gesperrt oder gelöscht werden – ohne Eingriff der Anwender." },
-    ]
+      { title: "Einführung in 5 Schritten", steps: ["Analyse", "Pilotgeräte", "Richtlinien", "Rollout", "Betrieb"] },
+      { title: "Mehrwert für Ihr Unternehmen", cards: [["Zero-Touch Onboarding", "Neue Geräte sind nach dem Auspacken automatisch eingerichtet und einsatzbereit."], ["Maximale Sicherheit", "Compliance, Verschlüsselung und Conditional Access für jedes Endgerät."], ["Weniger Support-Aufwand", "Standardisierung reduziert Tickets und beschleunigt den Arbeitsalltag."]] },
+    ], stats: [["BYOD", "fähig"], ["Win/Mac", "iOS/Android"], ["100%", "Compliance"], ["0-Touch", "Setup"]]
   },
   "/client-management": {
     eyebrow: "Client Management", title: "Standardisierte Clients für sichere Produktivität",
     intro: "Professionelles Client Management ist die Grundlage für sichere, produktive Arbeitsplätze. MEXAA-IT begleitet Ihre Clients über den gesamten Lebenszyklus: von der Beschaffung und Standardisierung über die automatisierte Einrichtung mit vorinstallierten Anwendungen bis zu Patch-Management, Sicherheitsüberwachung, Inventarisierung und planmäßigem Austausch. Sie erhalten einheitliche, sichere und schnell einsatzbereite Geräte, eine transparente Übersicht über Ihren Bestand und reduzieren gleichzeitig den Aufwand für Support und Administration deutlich.",
-    sections: [{ title: "Client Management Leistungen", bullets: ["Windows Deployment", "Softwareverteilung", "Patch-Management", "Inventarisierung", "Endpoint Protection", "Lifecycle-Planung"] }]
+    sections: [
+      { title: "Client Management Leistungen", bullets: ["Windows Deployment", "Softwareverteilung", "Patch-Management", "Inventarisierung", "Endpoint Protection", "Lifecycle-Planung"] },
+      { title: "Lifecycle in 5 Phasen", steps: ["Beschaffung", "Imaging", "Verteilung", "Betrieb", "Austausch"] },
+      { title: "Ihre Vorteile", cards: [["Einheitlichkeit", "Standardisierte Images und Konfigurationen reduzieren Fehlerquellen."], ["Transparenz", "Vollständige Inventarübersicht inklusive Lizenzen, Garantie und Standort."], ["Sicherheit", "Patches, Endpoint Protection und Verschlüsselung auf jedem Gerät."]] },
+    ], stats: [["100%", "Patch-Quote"], ["<24h", "Bereitstellung"], ["1 Image", "Pro Modell"], ["Lifecycle", "End-to-End"]]
   },
   "/cloud-telefonie": {
     eyebrow: "Cloud Telefonie", title: "Moderne Telefonie direkt aus der Cloud",
@@ -92,7 +106,9 @@ const pageData: Record<string, PageContent> = {
     sections: [
       { title: "VoIP Vorteile", bullets: ["Telefonieren von überall", "Weniger Hardware vor Ort", "Flexible Rufgruppen", "Einfache Skalierung", "Bessere Integration in Collaboration", "Transparente Betriebskosten"] },
       { title: "Funktionen", bullets: ["Rufnummernportierung", "Warteschleifen", "Auto Attendant", "Headset- und Geräteberatung", "Notrufkonzept", "Monitoring"] },
-    ]
+      { title: "Einführung", steps: ["Bedarf erfassen", "Konzept", "Portierung", "Rollout", "Optimierung"] },
+      { title: "Plattformen", cards: [["Microsoft Teams Phone", "Telefonie nahtlos integriert in Teams – ein Tool für Chat, Meeting und Anruf."], ["Placetel & 3CX", "Klassische Cloud-PBX-Lösungen mit umfangreichen Routing-Funktionen."], ["Hybride Szenarien", "Schrittweise Migration ohne Bruch der bestehenden Telefonieprozesse."]] },
+    ], stats: [["0", "TK-Anlagen"], ["100%", "Mobil"], ["DE", "Hosting"], ["24/7", "Erreichbar"]]
   },
   "/ki-loesungen": {
     eyebrow: "KI-Lösungen", title: "KI sinnvoll einsetzen – sicher, messbar und alltagstauglich",
@@ -101,7 +117,9 @@ const pageData: Record<string, PageContent> = {
       { title: "Microsoft Copilot", text: "Wir prüfen Datenqualität, Berechtigungen und Use Cases, bevor Copilot ausgerollt wird. So entsteht Nutzen ohne Kontrollverlust und Ihre Mitarbeitenden lernen, das Werkzeug effektiv und sicher zu nutzen." },
       { title: "KI Automatisierung", bullets: ["Dokumentenprozesse", "E-Mail- und Ticketklassifizierung", "Wissenssuche", "Reporting", "Meeting-Zusammenfassungen", "Workflow-Automatisierung"] },
       { title: "Use Cases", bullets: ["Vertriebsvorbereitung", "HR-Onboarding", "Support-Assistenz", "Management-Reports"] },
-    ]
+      { title: "Vorgehen", steps: ["Readiness-Check", "Use Case Auswahl", "Pilot", "Rollout", "Schulung"] },
+      { title: "Sicherheit & Governance", cards: [["Datenklassifizierung", "Sensible Inhalte werden vor dem KI-Zugriff erkannt und geschützt."], ["Berechtigungen", "Copilot greift ausschließlich auf Daten zu, für die Nutzer berechtigt sind."], ["Schulung", "Ihre Mitarbeitenden lernen den verantwortungsvollen Umgang mit generativer KI."]] },
+    ], stats: [["+30%", "Produktivität"], ["DSGVO", "konform"], ["EU", "Datenraum"], ["1:1", "Schulung"]]
   },
   "/workshops-schulungen": {
     eyebrow: "Workshops & Schulungen", title: "Schulungen, die Teams wirklich weiterbringen",
@@ -109,7 +127,8 @@ const pageData: Record<string, PageContent> = {
     sections: [
       { title: "Schulungsangebot", bullets: ["Microsoft 365 Grundlagen", "Teams produktiv nutzen", "Security Awareness", "SharePoint Struktur", "Copilot Einführung", "Administrator Workshops"] },
       { title: "Ablauf", steps: ["Bedarf klären", "Agenda abstimmen", "Workshop durchführen", "Follow-up sichern"] },
-    ]
+      { title: "Formate", cards: [["Vor-Ort-Workshop", "Interaktiv in Ihren Räumen mit praktischen Übungen am eigenen Gerät."], ["Live Online", "Remote-Schulungen über Microsoft Teams – ortsunabhängig und effizient."], ["Hybrid & Coaching", "Kombination aus Schulung und individuellem Coaching für Power-User."]] },
+    ], stats: [["6+", "Themen"], ["DE", "Sprache"], ["100%", "Praxisnah"], ["Follow-up", "inklusive"]]
   },
   "/ueber-uns": {
     eyebrow: "#thinkforresults!", title: "Steigerung der Wettbewerbsfähigkeit durch innovative digitale Lösungen", intro: "Seit unserer Gründung im Jahr 2013 verfolgen wir ein Ziel: #think for results! Wir setzen auf Transparenz, Verlässlichkeit und nachhaltige Strategien. Mit technischem Know-how auf aktuellem Stand und einem klaren Blick für individuelle Anforderungen entwickeln wir gemeinsam mit unseren Kunden Lösungen, die messbare und langfristige Wettbewerbsvorteile schaffen.",
