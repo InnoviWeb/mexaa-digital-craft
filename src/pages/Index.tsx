@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { ArrowRight, Mail, MonitorCheck, Network, ShieldCheck, Sparkles, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import serverRoom from "@/assets/mexaa-server-room.jpg";
@@ -19,66 +18,72 @@ const ParticleNetwork = () => (
   </svg>
 );
 
+const ServiceCard = ({
+  title,
+  path,
+  description,
+  Icon,
+  index,
+}: {
+  title: string;
+  path: string;
+  description: string;
+  Icon: typeof MonitorCheck;
+  index: number;
+}) => (
+  <Link
+    to={path}
+    className="group relative flex items-start gap-5 rounded-xl border border-border/70 bg-card p-5 transition hover:border-primary/50 hover:bg-card hover:shadow-lift"
+  >
+    <span className="grid h-12 w-12 shrink-0 place-items-center rounded-lg bg-primary/10 text-primary transition group-hover:bg-primary group-hover:text-primary-foreground">
+      <Icon className="h-5 w-5" />
+    </span>
+    <div className="flex-1">
+      <div className="mb-1 text-[10px] font-black uppercase tracking-[0.18em] text-muted-foreground">
+        {String(index).padStart(2, "0")}
+      </div>
+      <h3 className="text-[15px] font-black leading-snug text-foreground">{title}</h3>
+      <p className="mt-1.5 text-[13px] leading-6 text-muted-foreground">{description}</p>
+    </div>
+    <ArrowRight className="mt-1 h-4 w-4 shrink-0 text-muted-foreground transition group-hover:translate-x-1 group-hover:text-primary" />
+  </Link>
+);
+
 const ServicesShowcase = () => {
-  const [tab, setTab] = useState<"it" | "sol">("it");
-  const list = (tab === "it" ? itServices : solutions).map((s, i) => ({
-    ...s,
-    icon: serviceIcons[(i + (tab === "it" ? 0 : 3)) % serviceIcons.length],
-  }));
+  const itList = itServices.map((s, i) => ({ ...s, Icon: serviceIcons[i % serviceIcons.length] }));
+  const solList = solutions.map((s, i) => ({ ...s, Icon: serviceIcons[(i + 3) % serviceIcons.length] }));
   return (
     <section id="services" className="relative bg-secondary px-6 py-[100px]">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
       <div className="mx-auto max-w-[1200px]">
-        <div className="mx-auto mb-10 max-w-3xl text-center">
+        <div className="mx-auto mb-14 max-w-3xl text-center">
           <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-xs font-black uppercase tracking-[0.22em] text-primary">
             Leistungen
           </div>
           <h2 className="text-[34px] font-extrabold leading-tight text-section-title md:text-[44px]">
             Alles, was Ihre IT braucht – aus einer Hand
           </h2>
-          <p className="mt-5 text-base leading-7 text-muted-foreground md:text-lg md:leading-8">
-            Klar gegliedert in zwei Kompetenzbereiche – wählen Sie die Sicht, die Sie interessiert.
-          </p>
         </div>
 
-        <div className="mb-12 flex justify-center">
-          <div className="inline-flex rounded-full border border-border bg-background p-1.5 shadow-sm">
-            {[
-              { key: "it", label: "IT-Services" },
-              { key: "sol", label: "Solutions" },
-            ].map((t) => (
-              <button
-                key={t.key}
-                onClick={() => setTab(t.key as "it" | "sol")}
-                className={`rounded-full px-6 py-2.5 text-sm font-black transition ${
-                  tab === t.key
-                    ? "bg-primary text-primary-foreground shadow-glow"
-                    : "text-muted-foreground hover:text-foreground"
-                }`}
-              >
-                {t.label}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {list.map(({ title, path, description, icon: Icon }) => (
-            <Link
-              key={path}
-              to={path}
-              className="group relative flex flex-col overflow-hidden rounded-2xl border border-border bg-card p-7 shadow-sm transition hover:-translate-y-1.5 hover:border-primary/40 hover:shadow-lift"
-            >
-              <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary to-accent opacity-0 transition group-hover:opacity-100" />
-              <span className="grid h-12 w-12 place-items-center rounded-xl bg-primary/10 text-primary transition group-hover:bg-primary group-hover:text-primary-foreground">
-                <Icon className="h-6 w-6" />
-              </span>
-              <h3 className="mt-6 text-lg font-black leading-snug text-foreground">{title}</h3>
-              <p className="mt-3 flex-1 text-sm leading-6 text-muted-foreground">{description}</p>
-              <span className="mt-5 inline-flex items-center gap-1 text-sm font-extrabold text-primary">
-                Mehr erfahren <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
-              </span>
-            </Link>
+        <div className="grid gap-10 lg:grid-cols-2">
+          {[
+            { eyebrow: "01 — Betrieb & Support", title: "IT-Services", desc: "Verlässlicher Betrieb Ihrer gesamten IT – von Monitoring bis Vor-Ort-Support.", items: itList },
+            { eyebrow: "02 — Cloud & Modern Work", title: "Solutions", desc: "Moderne Microsoft- und Cloud-Lösungen für produktive, sichere Teams.", items: solList },
+          ].map((col) => (
+            <div key={col.title} className="rounded-3xl border border-border bg-background/60 p-6 shadow-sm md:p-8">
+              <div className="mb-6 flex items-baseline justify-between gap-4 border-b border-border pb-5">
+                <div>
+                  <div className="text-[11px] font-black uppercase tracking-[0.2em] text-primary">{col.eyebrow}</div>
+                  <h3 className="mt-1 text-2xl font-black text-foreground">{col.title}</h3>
+                </div>
+                <p className="hidden max-w-[260px] text-right text-xs leading-5 text-muted-foreground sm:block">{col.desc}</p>
+              </div>
+              <div className="grid gap-3">
+                {col.items.map((s, i) => (
+                  <ServiceCard key={s.path} {...s} index={i + 1} />
+                ))}
+              </div>
+            </div>
           ))}
         </div>
       </div>

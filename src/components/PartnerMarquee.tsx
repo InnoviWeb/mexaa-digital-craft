@@ -31,7 +31,7 @@ export const PartnerMarquee = () => {
                 src={logo.src}
                 alt={logo.alt}
                 loading="lazy"
-                className="max-h-12 w-auto max-w-full object-contain opacity-70 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0"
+                className="max-h-12 w-auto max-w-full object-contain transition duration-300 hover:scale-105"
               />
             </div>
           ))}
