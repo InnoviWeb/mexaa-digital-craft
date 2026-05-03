@@ -60,7 +60,7 @@ const ServicesShowcase = () => {
           <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-xs font-black uppercase tracking-[0.22em] text-primary">
             Leistungen
           </div>
-          <h2 className="text-[34px] font-extrabold leading-tight text-section-title md:text-[44px]">
+          <h2 className="text-[26px] sm:text-[32px] font-extrabold leading-tight text-section-title md:text-[44px]">
             Alles, was Ihre IT braucht – aus einer Hand
           </h2>
         </div>
@@ -117,7 +117,7 @@ const Index = () => (
 
     <section className="bg-background px-6 py-16 md:py-[100px]">
       <div className="mx-auto max-w-[1200px] text-center section-reveal">
-        <h2 className="text-[34px] font-extrabold leading-tight text-primary md:text-[40px]">Ihre IT – sicher, effizient und sorgenfrei</h2>
+        <h2 className="text-[26px] sm:text-[32px] font-extrabold leading-tight text-primary md:text-[40px]">Ihre IT – sicher, effizient und sorgenfrei</h2>
         <p className="mx-auto mt-6 max-w-3xl text-base leading-7 text-muted-foreground md:text-lg md:leading-8">Wir verbinden strategische Beratung mit operativer Exzellenz – damit Ihre IT nicht bremst, sondern Ihr Wachstum zuverlässig trägt.</p>
         <div className="mt-16 grid gap-6 md:grid-cols-3">
           {[[ShieldCheck, 'Flexible IT-Flatrates', 'Transparente Leistungen, kalkulierbare Kosten und ein Serviceumfang, der zu Ihrem Unternehmen passt.'], [MonitorCheck, 'Proaktives Monitoring', 'Wir erkennen Risiken frühzeitig, bevor Ausfälle entstehen oder Produktivität verloren geht.'], [Network, 'Persönliche Betreuung', 'Direkte Ansprechpartner, klare Kommunikation und Entscheidungen auf Augenhöhe.']].map(([Icon, title, text]) => {
@@ -173,7 +173,7 @@ const Index = () => (
 
     <section id="contact" className="bg-hero px-6 py-16 md:py-[100px] text-center text-hero-foreground">
       <div className="mx-auto max-w-[1200px]">
-        <h2 className="text-[34px] font-extrabold leading-tight text-hero-foreground md:text-[40px]">Bereit für Ihre digitale Transformation?</h2>
+        <h2 className="text-[26px] sm:text-[32px] font-extrabold leading-tight text-hero-foreground md:text-[40px]">Bereit für Ihre digitale Transformation?</h2>
         <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-hero-foreground/75 md:text-lg md:leading-8">Sprechen wir über Ihre Ziele, Risiken und nächsten Schritte. In einem unverbindlichen Erstgespräch erhalten Sie eine klare Einschätzung für Ihre IT-Roadmap.</p>
         <Link to="/kontakt" className="mt-10 inline-flex items-center gap-2 rounded-md bg-primary px-8 py-4 text-base font-black text-primary-foreground shadow-glow transition hover:-translate-y-1 hover:shadow-lift">
           <Mail className="h-5 w-5" /> Kontakt aufnehmen
