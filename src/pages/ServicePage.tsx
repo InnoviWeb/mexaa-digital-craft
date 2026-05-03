@@ -156,8 +156,8 @@ const Hero = ({ eyebrow, title, intro }: { eyebrow: string; title: string; intro
     <div className="relative mx-auto max-w-[1200px] py-[100px]">
       <div className="max-w-3xl animate-fade-up">
         <div className="mb-6 inline-flex items-center gap-3 rounded-md border border-primary-foreground/20 bg-primary-foreground/10 px-4 py-2 text-sm font-extrabold backdrop-blur-xl"><Sparkles className="h-4 w-4 text-accent" /> {eyebrow}</div>
-        <h1 className="text-[48px] font-black leading-[1.05] tracking-[-0.03em] text-hero-foreground md:text-[64px]">{title}</h1>
-        <p className="mt-7 max-w-2xl text-lg font-medium leading-8 text-hero-foreground/82">{intro}</p>
+        <h1 className="text-[32px] font-black leading-[1.1] tracking-[-0.03em] text-hero-foreground sm:text-[44px] md:text-[58px] lg:text-[64px]">{title}</h1>
+        <p className="mt-6 max-w-2xl text-sm font-medium leading-6 text-hero-foreground/82 sm:text-base sm:leading-7 md:text-lg md:leading-8">{intro}</p>
       </div>
     </div>
   </section>
