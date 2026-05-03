@@ -102,8 +102,8 @@ const Index = () => (
       <div className="relative z-10 mx-auto flex min-h-[88vh] max-w-[1200px] items-center px-6 pb-20 pt-32">
         <div className="max-w-3xl text-left section-reveal">
           <div className="mb-8 inline-flex items-center gap-3 rounded-md border border-primary-foreground/20 bg-primary-foreground/10 px-4 py-2 text-sm font-extrabold text-hero-foreground shadow-glass backdrop-blur-xl"><Sparkles className="h-4 w-4 text-accent" /> MEXAA-IT · think for results!</div>
-          <h1 className="text-[40px] font-black leading-[1.05] tracking-[-0.03em] text-hero-foreground sm:text-[52px] md:text-[64px]">Gemeinsam die digitale Zukunft gestalten</h1>
-          <p className="mt-8 max-w-2xl text-base font-medium leading-7 text-hero-foreground/85 sm:text-lg sm:leading-8 md:text-xl">MEXAA-IT GmbH entwickelt, betreibt und schützt moderne IT-Landschaften für Unternehmen, die zuverlässige Systeme, klare Prozesse und messbare Ergebnisse erwarten.</p>
+          <h1 className="text-[30px] font-black leading-[1.1] tracking-[-0.03em] text-hero-foreground sm:text-[44px] md:text-[58px] lg:text-[64px]">Gemeinsam die digitale Zukunft gestalten</h1>
+          <p className="mt-6 max-w-2xl text-sm font-medium leading-6 text-hero-foreground/85 sm:text-base sm:leading-7 md:text-lg md:leading-8">MEXAA-IT GmbH entwickelt, betreibt und schützt moderne IT-Landschaften für Unternehmen, die zuverlässige Systeme, klare Prozesse und messbare Ergebnisse erwarten.</p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <Link to="/kontakt" className="inline-flex items-center justify-center gap-2 rounded-md bg-primary px-7 py-4 text-base font-black text-primary-foreground shadow-glow transition hover:-translate-y-1 hover:shadow-lift">Beratung anfragen <ArrowRight className="h-5 w-5" /></Link>
             <Link to="/managed-service" className="inline-flex items-center justify-center gap-2 rounded-md border border-primary-foreground/20 bg-primary-foreground/10 px-7 py-4 text-base font-black text-hero-foreground backdrop-blur-xl transition hover:-translate-y-1 hover:bg-primary-foreground/16">Leistungen entdecken</Link>
