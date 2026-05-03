@@ -197,11 +197,11 @@ const ContactCta = () => (
 );
 
 const ContentSection = ({ section }: { section: any }) => (
-  <section className="bg-background px-6 py-[100px] even:bg-secondary">
+  <section className="bg-background px-6 py-16 even:bg-secondary md:py-[100px]">
     <div className="mx-auto max-w-[1200px] animate-fade-up">
-      <h2 className="text-[40px] font-extrabold leading-tight text-section-title">{section.title}</h2>
-      {section.text && <p className="mt-6 max-w-3xl text-lg leading-8 text-muted-foreground">{section.text}</p>}
-      {section.bullets && <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">{section.bullets.map((b: string) => <div key={b} className="service-card flex gap-3"><CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-primary" /><span className="font-semibold leading-7">{b}</span></div>)}</div>}
+      <h2 className="text-[26px] font-extrabold leading-tight text-section-title sm:text-[32px] md:text-[40px]">{section.title}</h2>
+      {section.text && <p className="mt-5 max-w-3xl text-base leading-7 text-muted-foreground md:mt-6 md:text-lg md:leading-8">{section.text}</p>}
+      {section.bullets && <div className="mt-8 grid gap-4 md:mt-10 md:grid-cols-2 lg:grid-cols-3">{section.bullets.map((b: string) => <div key={b} className="service-card flex gap-3"><CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-primary" /><span className="font-semibold leading-7">{b}</span></div>)}</div>}
       {section.steps && <div className="mt-10 grid gap-4 md:grid-cols-5">{section.steps.map((s: string, i: number) => <div key={s} className="rounded-md border border-border bg-card p-6 text-center shadow-sm"><div className="mx-auto grid h-12 w-12 place-items-center rounded-full bg-primary font-black text-primary-foreground">{i + 1}</div><h3 className="mt-5 font-black">{s}</h3></div>)}</div>}
       {section.jobs && <div className="mt-10 grid gap-5 md:grid-cols-3">{section.jobs.map((j: string) => <div key={j} className="service-card"><h3 className="text-xl font-black">{j}</h3><p className="mt-3 text-muted-foreground">Vollzeit oder hybrid · Start nach Vereinbarung · Entwicklungsperspektive inklusive.</p></div>)}</div>}
       {section.cards && <div className="mt-10 grid gap-5 md:grid-cols-3">{section.cards.map(([t, d]: string[]) => <div key={t} className="service-card"><h3 className="text-xl font-black">{t}</h3><p className="mt-3 leading-7 text-muted-foreground">{d}</p></div>)}</div>}
