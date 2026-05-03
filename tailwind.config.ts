@@ -135,6 +135,7 @@ export default {
         "draw-line": "draw-line 7s linear infinite alternate",
         "count-pop": "count-pop .7s cubic-bezier(.22,1,.36,1) both",
         marquee: "marquee 35s linear infinite",
+        "splash-logo": "splash-logo 1.4s cubic-bezier(.22,1,.36,1) both",
       },
     },
   },
