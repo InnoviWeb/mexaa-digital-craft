@@ -1,22 +1,24 @@
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import logo from "@/assets/mexaa-logo.png";
 
 export const SplashScreen = () => {
-  const [phase, setPhase] = useState<"in" | "out" | "done">("in");
+  const { pathname } = useLocation();
+  const [phase, setPhase] = useState<"in" | "out" | "done">("done");
 
   useEffect(() => {
-    if (sessionStorage.getItem("mexaa-splash-shown")) {
+    if (pathname !== "/") {
       setPhase("done");
       return;
     }
-    sessionStorage.setItem("mexaa-splash-shown", "1");
-    const t1 = setTimeout(() => setPhase("out"), 1400);
-    const t2 = setTimeout(() => setPhase("done"), 2000);
+    setPhase("in");
+    const t1 = setTimeout(() => setPhase("out"), 1300);
+    const t2 = setTimeout(() => setPhase("done"), 1850);
     return () => {
       clearTimeout(t1);
       clearTimeout(t2);
     };
-  }, []);
+  }, [pathname]);
 
   if (phase === "done") return null;
 
@@ -29,7 +31,7 @@ export const SplashScreen = () => {
       <img
         src={logo}
         alt="MEXAA-IT"
-        className="h-24 w-auto animate-splash-logo md:h-32"
+        className="h-20 w-auto animate-splash-logo md:h-32"
       />
     </div>
   );
