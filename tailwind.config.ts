@@ -78,6 +78,7 @@ export default {
         glass: "var(--shadow-glass)",
         lift: "var(--shadow-lift)",
         glow: "var(--shadow-glow)",
+        soft: "var(--shadow-soft)",
       },
       borderRadius: {
         lg: "var(--radius)",

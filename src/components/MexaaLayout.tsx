@@ -15,24 +15,24 @@ export const Navigation = () => {
     };
   }, [open]);
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-border bg-background/90 backdrop-blur-2xl shadow-sm">
-      <nav className="mx-auto flex h-20 max-w-[1200px] items-center justify-between px-6" aria-label="Hauptnavigation">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-2xl">
+      <nav className="mx-auto flex h-20 max-w-[1240px] items-center justify-between px-6" aria-label="Hauptnavigation">
         <Link to="/" className="flex items-center" aria-label="MEXAA-IT Startseite">
-          <img src={logo} alt="MEXAA-IT Logo" width={160} height={48} className="h-12 w-auto object-contain" />
+          <img src={logo} alt="MEXAA-IT Logo" width={160} height={48} className="h-11 w-auto object-contain" />
         </Link>
-        <div className="hidden items-center gap-1 lg:flex">
+        <div className="hidden items-center gap-0.5 lg:flex">
           {navGroups.map((group) => {
             const Icon = group.icon;
             return (
               <div key={group.title} className="group relative">
-                <button className="flex items-center gap-2 rounded-md px-4 py-3 text-sm font-semibold text-foreground/80 transition hover:bg-secondary hover:text-primary">
-                  <Icon className="h-4 w-4" /> {group.title} <ChevronDown className="h-4 w-4 transition group-hover:rotate-180" />
+                <button className="flex items-center gap-1.5 rounded-full px-4 py-2.5 text-[13.5px] font-semibold text-foreground/75 transition-colors duration-200 hover:bg-secondary hover:text-primary">
+                  <Icon className="h-3.5 w-3.5 opacity-70" /> {group.title} <ChevronDown className="h-3.5 w-3.5 transition-transform duration-300 group-hover:rotate-180" />
                 </button>
                 <div className="nav-dropdown">
                   {group.items.map((item) => (
-                    <Link key={item.path} to={item.path} className="flex items-center justify-between rounded-sm px-3 py-3 text-sm font-semibold text-foreground transition hover:bg-secondary hover:text-primary">
+                    <Link key={item.path} to={item.path} className="flex items-center justify-between rounded-lg px-3 py-2.5 text-sm font-semibold text-foreground transition hover:bg-secondary hover:text-primary">
                       {item.label}
-                      <ArrowRight className="h-4 w-4" />
+                      <ArrowRight className="h-4 w-4 opacity-50" />
                     </Link>
                   ))}
                 </div>
@@ -41,10 +41,13 @@ export const Navigation = () => {
           })}
         </div>
         <div className="flex items-center gap-2">
-          <Link to="/kontakt" className="hidden rounded-md bg-primary px-5 py-3 text-sm font-extrabold text-primary-foreground shadow-glow transition hover:-translate-y-0.5 hover:shadow-lift sm:inline-flex">
-            Kontakt
+          <a href="tel:+4961015969082" className="hidden items-center gap-2 rounded-full px-4 py-2.5 text-[13.5px] font-semibold text-foreground/75 transition hover:text-primary xl:inline-flex">
+            <Phone className="h-3.5 w-3.5" /> +49 6101 596 9082
+          </a>
+          <Link to="/kontakt" className="hidden items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-[13.5px] font-bold text-primary-foreground shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:shadow-glow sm:inline-flex">
+            Kontakt <ArrowRight className="h-3.5 w-3.5" />
           </Link>
-          <button onClick={() => setOpen(!open)} aria-label="Menü öffnen" className="grid h-11 w-11 place-items-center rounded-md border border-border text-foreground lg:hidden">
+          <button onClick={() => setOpen(!open)} aria-label="Menü öffnen" className="grid h-11 w-11 place-items-center rounded-full border border-border text-foreground lg:hidden">
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
         </div>
