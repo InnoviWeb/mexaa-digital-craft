@@ -1,4 +1,4 @@
-import { ArrowRight, ArrowUpRight, CheckCircle2, Cloud, Mail, MonitorCheck, Phone, ShieldCheck, Sparkles, Star, Users, Wrench } from "lucide-react";
+import { ArrowRight, ArrowUpRight, CheckCircle2, Cloud, Mail, MonitorCheck, Phone, Sparkles, Star, Wrench } from "lucide-react";
 import { Link } from "react-router-dom";
 import drDinger from "@/assets/dr-helmut-dinger.avif";
 import cardCloud from "@/assets/card-cloud.jpg";
@@ -322,5 +322,3 @@ const Index = () => (
 );
 
 export default Index;
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const _keep = Users;
