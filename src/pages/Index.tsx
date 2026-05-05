@@ -322,5 +322,5 @@ const Index = () => (
 );
 
 export default Index;
-
-<Users className="hidden" /> {/* keep import */}
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const _keep = Users;
