@@ -197,7 +197,7 @@ const StatsBand = () => (
       <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-4">
         {stats.map((s) => (
           <div key={s.label} className="text-center md:text-left">
-            <div className="bg-gradient-to-r from-primary to-accent bg-clip-text text-4xl font-black text-transparent md:text-5xl">
+            <div className="text-4xl font-black text-section-title md:text-5xl">
               {s.value}
             </div>
             <div className="mt-2 text-[13px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
