@@ -1,4 +1,4 @@
-import { ArrowRight, ArrowUpRight, CheckCircle2, Cloud, Mail, MonitorCheck, Phone, Sparkles, Star, Wrench } from "lucide-react";
+import { ArrowRight, ArrowUpRight, BadgeCheck, CheckCircle2, Cloud, Mail, MonitorCheck, Phone, Quote, ShieldCheck, Star, Wrench } from "lucide-react";
 import { Link } from "react-router-dom";
 import drDinger from "@/assets/dr-helmut-dinger.avif";
 import cardCloud from "@/assets/card-cloud.jpg";
@@ -9,55 +9,90 @@ import { FaqSection, ReasonsForMexaa, WhyMexaa } from "@/components/MexaaSection
 import { PartnerMarquee } from "@/components/PartnerMarquee";
 import { itServices, serviceIcons, solutions } from "@/components/mexaaData";
 
-/* ---------- Hero (Itanix-Style: zentriert, große Headline) ---------- */
+/* ---------- Hero (Split-Grid, Corporate Trust) ---------- */
+const trustBullets = [
+  "Microsoft Solutions Partner",
+  "DSGVO-konform · Hosting in Deutschland",
+  "Reaktionszeit < 2 Stunden",
+  "Persönliche Ansprechpartner statt Callcenter",
+];
+
 const Hero = () => (
-  <section id="home" className="relative overflow-hidden bg-background pt-28 md:pt-36">
-    {/* dezenter Verlaufs-Hintergrund */}
+  <section id="home" className="relative overflow-hidden border-b border-border bg-background pt-28 md:pt-32">
     <div className="pointer-events-none absolute inset-0 -z-10">
-      <div className="absolute inset-x-0 top-0 h-[640px] bg-[radial-gradient(ellipse_at_top,hsl(var(--primary)/0.18),transparent_60%)]" />
-      <div className="absolute -left-32 top-40 h-80 w-80 rounded-full bg-primary/10 blur-3xl" />
-      <div className="absolute -right-32 top-20 h-80 w-80 rounded-full bg-accent/10 blur-3xl" />
+      <div className="absolute inset-x-0 top-0 h-[520px] bg-[radial-gradient(ellipse_at_top_left,hsl(var(--primary)/0.10),transparent_55%)]" />
+      <div className="absolute right-0 top-0 h-[520px] w-1/2 bg-[radial-gradient(ellipse_at_top_right,hsl(var(--accent)/0.08),transparent_60%)]" />
     </div>
 
-    <div className="mx-auto max-w-[1200px] px-6 pb-20 text-center">
-      <div className="mx-auto mb-7 inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-[11px] font-black uppercase tracking-[0.22em] text-primary shadow-sm">
-        <Sparkles className="h-3.5 w-3.5" /> MEXAA-IT · think for results!
-      </div>
-      <h1 className="mx-auto max-w-4xl text-[34px] font-black leading-[1.05] tracking-[-0.02em] text-section-title sm:text-[52px] md:text-[68px]">
-        Der IT-Dienstleister für{" "}
-        <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-          innovative IT-Lösungen
-        </span>
-      </h1>
-      <p className="mx-auto mt-7 max-w-2xl text-[15px] leading-8 text-muted-foreground sm:text-[17px]">
-        Als IT-Systemhaus aus dem Rhein-Main-Gebiet begleiten wir Unternehmen bei{" "}
-        <span className="font-semibold text-foreground">Cloud-Transformation</span>,{" "}
-        <span className="font-semibold text-foreground">Digitalisierung</span> und dem{" "}
-        <span className="font-semibold text-foreground">Modern Workplace</span> – strategisch, technisch und im laufenden Betrieb.
-      </p>
-      <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
-        <Link
-          to="/kontakt"
-          className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-black text-primary-foreground shadow-lift transition hover:-translate-y-0.5 hover:shadow-glow"
-        >
-          Kostenlose Beratung <ArrowRight className="h-4 w-4" />
-        </Link>
-        <a
-          href="#services"
-          className="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-card px-7 py-3.5 text-sm font-black text-foreground transition hover:border-primary hover:text-primary"
-        >
-          Leistungen entdecken
-        </a>
+    <div className="mx-auto grid max-w-[1240px] items-center gap-14 px-6 pb-20 pt-6 md:pb-24 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
+      {/* LEFT */}
+      <div>
+        <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-border bg-card px-3.5 py-1.5 text-[11px] font-black uppercase tracking-[0.22em] text-foreground/70">
+          <span className="h-1.5 w-1.5 rounded-full bg-primary" /> IT-Systemhaus · Rhein-Main
+        </div>
+        <h1 className="text-[36px] font-black leading-[1.06] tracking-[-0.02em] text-section-title sm:text-[48px] md:text-[60px]">
+          IT, die Ihr Geschäft <span className="text-primary">stabil</span> und <span className="text-primary">skalierbar</span> macht.
+        </h1>
+        <p className="mt-7 max-w-xl text-[15px] leading-8 text-muted-foreground sm:text-[16.5px]">
+          Wir betreiben, sichern und modernisieren die IT mittelständischer Unternehmen –
+          mit klaren SLAs, persönlichen Ansprechpartnern und einer durchgängigen Microsoft-Cloud-Strategie.
+        </p>
+        <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <Link
+            to="/kontakt"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-black text-primary-foreground shadow-soft transition hover:-translate-y-0.5 hover:shadow-glow"
+          >
+            Kostenlose Erstberatung <ArrowRight className="h-4 w-4" />
+          </Link>
+          <a
+            href="#services"
+            className="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-card px-7 py-3.5 text-sm font-black text-foreground transition hover:border-primary hover:text-primary"
+          >
+            Leistungen ansehen
+          </a>
+        </div>
+        <ul className="mt-10 grid gap-3 sm:grid-cols-2">
+          {trustBullets.map((t) => (
+            <li key={t} className="flex items-start gap-2.5 text-[13.5px] text-foreground/80">
+              <BadgeCheck className="mt-0.5 h-4 w-4 shrink-0 text-primary" /> {t}
+            </li>
+          ))}
+        </ul>
       </div>
 
-      {/* Trust-Signale */}
-      <ul className="mx-auto mt-12 flex max-w-3xl flex-wrap items-center justify-center gap-x-8 gap-y-3 text-[13px] text-muted-foreground">
-        {["Microsoft Solutions Partner", "DSGVO-konform aus DE", "Reaktion < 2 Stunden", "Persönliche Ansprechpartner"].map((t) => (
-          <li key={t} className="flex items-center gap-2">
-            <CheckCircle2 className="h-4 w-4 text-primary" /> {t}
-          </li>
-        ))}
-      </ul>
+      {/* RIGHT — Trust Card */}
+      <aside className="relative">
+        <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-br from-primary/15 via-transparent to-accent/15 blur-2xl" />
+        <div className="overflow-hidden rounded-3xl border border-border bg-card shadow-lift">
+          <div className="relative">
+            <img
+              src={drDinger}
+              alt="Dr. Helmut Dinger – RWTH International Academy"
+              width={640}
+              height={520}
+              className="h-[320px] w-full object-cover md:h-[360px]"
+            />
+            <div className="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-background/90 px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.22em] text-foreground shadow-sm backdrop-blur">
+              <ShieldCheck className="h-3.5 w-3.5 text-primary" /> Kundenstimme
+            </div>
+          </div>
+          <div className="p-7">
+            <Quote className="h-6 w-6 text-primary/60" />
+            <p className="mt-3 text-[14.5px] leading-7 text-foreground">
+              „Mit MEXAA-IT haben wir den Umstieg in eine moderne, cloudbasierte IT-Welt geschafft – mit hoher Verfügbarkeit, planbaren Kosten und einem kompetenten Ansprechpartner an unserer Seite."
+            </p>
+            <div className="mt-5 flex items-center justify-between border-t border-border pt-5">
+              <div>
+                <div className="text-sm font-black text-foreground">Dr. Helmut Dinger</div>
+                <div className="text-xs text-muted-foreground">RWTH International Academy</div>
+              </div>
+              <div className="flex gap-0.5 text-primary">
+                {Array.from({ length: 5 }).map((_, i) => <Star key={i} className="h-4 w-4 fill-current" />)}
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
     </div>
   </section>
 );
@@ -162,7 +197,7 @@ const StatsBand = () => (
       <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-4">
         {stats.map((s) => (
           <div key={s.label} className="text-center md:text-left">
-            <div className="bg-gradient-to-r from-primary to-accent bg-clip-text text-4xl font-black text-transparent md:text-5xl">
+            <div className="text-4xl font-black text-section-title md:text-5xl">
               {s.value}
             </div>
             <div className="mt-2 text-[13px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
