@@ -1,6 +1,7 @@
-import { ArrowRight, ArrowUpRight, BadgeCheck, CheckCircle2, Cloud, Mail, MonitorCheck, Phone, Quote, ShieldCheck, Star, Wrench } from "lucide-react";
+import { ArrowRight, ArrowUpRight, BadgeCheck, CheckCircle2, Cloud, Mail, MonitorCheck, Phone, ShieldCheck, Star, Wrench } from "lucide-react";
 import { Link } from "react-router-dom";
 import drDinger from "@/assets/dr-helmut-dinger.avif";
+import serverRoom from "@/assets/mexaa-server-room.jpg";
 import cardCloud from "@/assets/card-cloud.jpg";
 import cardInfra from "@/assets/card-infra.jpg";
 import cardWorkplace from "@/assets/card-workplace.jpg";
