@@ -61,34 +61,35 @@ const Hero = () => (
         </ul>
       </div>
 
-      {/* RIGHT — Trust Card */}
+      {/* RIGHT — Server / Infrastructure visual */}
       <aside className="relative">
         <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-br from-primary/15 via-transparent to-accent/15 blur-2xl" />
-        <div className="overflow-hidden rounded-3xl border border-border bg-card shadow-lift">
-          <div className="relative">
-            <img
-              src={drDinger}
-              alt="Dr. Helmut Dinger – RWTH International Academy"
-              width={640}
-              height={520}
-              className="h-[320px] w-full object-cover md:h-[360px]"
-            />
-            <div className="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-background/90 px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.22em] text-foreground shadow-sm backdrop-blur">
-              <ShieldCheck className="h-3.5 w-3.5 text-primary" /> Kundenstimme
-            </div>
+        <div className="relative overflow-hidden rounded-3xl border border-border bg-card shadow-lift">
+          <img
+            src={serverRoom}
+            alt="MEXAA-IT Rechenzentrum – moderne Cloud- und Server-Infrastruktur"
+            width={720}
+            height={560}
+            className="h-[420px] w-full object-cover md:h-[520px]"
+          />
+          <div className="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-background/90 px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.22em] text-foreground shadow-sm backdrop-blur">
+            <ShieldCheck className="h-3.5 w-3.5 text-primary" /> Hosting in Deutschland
           </div>
-          <div className="p-7">
-            <Quote className="h-6 w-6 text-primary/60" />
-            <p className="mt-3 text-[14.5px] leading-7 text-foreground">
-              „Mit MEXAA-IT haben wir den Umstieg in eine moderne, cloudbasierte IT-Welt geschafft – mit hoher Verfügbarkeit, planbaren Kosten und einem kompetenten Ansprechpartner an unserer Seite."
-            </p>
-            <div className="mt-5 flex items-center justify-between border-t border-border pt-5">
+          <div className="absolute bottom-4 left-4 right-4 rounded-2xl border border-border/60 bg-background/85 p-4 backdrop-blur-md">
+            <div className="flex items-center justify-between gap-4">
               <div>
-                <div className="text-sm font-black text-foreground">Dr. Helmut Dinger</div>
-                <div className="text-xs text-muted-foreground">RWTH International Academy</div>
+                <div className="text-[10px] font-black uppercase tracking-[0.22em] text-muted-foreground">Verfügbarkeit</div>
+                <div className="text-2xl font-black text-foreground">99,9 %</div>
               </div>
-              <div className="flex gap-0.5 text-primary">
-                {Array.from({ length: 5 }).map((_, i) => <Star key={i} className="h-4 w-4 fill-current" />)}
+              <div className="h-10 w-px bg-border" />
+              <div>
+                <div className="text-[10px] font-black uppercase tracking-[0.22em] text-muted-foreground">Reaktion</div>
+                <div className="text-2xl font-black text-foreground">&lt; 2 h</div>
+              </div>
+              <div className="h-10 w-px bg-border" />
+              <div>
+                <div className="text-[10px] font-black uppercase tracking-[0.22em] text-muted-foreground">Standort</div>
+                <div className="text-2xl font-black text-foreground">DE</div>
               </div>
             </div>
           </div>
