@@ -19,16 +19,23 @@ const trustBullets = [
 ];
 
 const Hero = () => (
-  <section id="home" className="relative overflow-hidden border-b border-border bg-background pt-28 md:pt-32">
-    <div className="pointer-events-none absolute inset-0 -z-10">
-      <div className="absolute inset-x-0 top-0 h-[520px] bg-[radial-gradient(ellipse_at_top_left,hsl(var(--primary)/0.10),transparent_55%)]" />
-      <div className="absolute right-0 top-0 h-[520px] w-1/2 bg-[radial-gradient(ellipse_at_top_right,hsl(var(--accent)/0.08),transparent_60%)]" />
+  <section id="home" className="relative overflow-hidden border-b border-border pt-28 md:pt-32">
+    {/* Background image covering full hero */}
+    <div className="absolute inset-0 -z-10">
+      <img
+        src={serverRoom}
+        alt="MEXAA-IT Rechenzentrum – moderne Cloud- und Server-Infrastruktur"
+        className="h-full w-full object-cover"
+      />
+      {/* Overlays for readability */}
+      <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/85 to-background/40" />
+      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
+      <div className="absolute inset-x-0 top-0 h-[520px] bg-[radial-gradient(ellipse_at_top_left,hsl(var(--primary)/0.15),transparent_55%)]" />
     </div>
 
-    <div className="mx-auto grid max-w-[1240px] items-center gap-14 px-6 pb-20 pt-6 md:pb-24 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
-      {/* LEFT */}
-      <div>
-        <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-border bg-card px-3.5 py-1.5 text-[11px] font-black uppercase tracking-[0.22em] text-foreground/70">
+    <div className="mx-auto max-w-[1240px] px-6 pb-24 pt-6 md:pb-32 md:pt-12">
+      <div className="max-w-2xl">
+        <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-border bg-card/90 px-3.5 py-1.5 text-[11px] font-black uppercase tracking-[0.22em] text-foreground/70 backdrop-blur">
           <span className="h-1.5 w-1.5 rounded-full bg-primary" /> IT-Systemhaus · Rhein-Main
         </div>
         <h1 className="text-[36px] font-black leading-[1.06] tracking-[-0.02em] text-section-title sm:text-[48px] md:text-[60px]">
@@ -47,7 +54,7 @@ const Hero = () => (
           </Link>
           <a
             href="#services"
-            className="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-card px-7 py-3.5 text-sm font-black text-foreground transition hover:border-primary hover:text-primary"
+            className="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-card/90 px-7 py-3.5 text-sm font-black text-foreground backdrop-blur transition hover:border-primary hover:text-primary"
           >
             Leistungen ansehen
           </a>
@@ -60,41 +67,6 @@ const Hero = () => (
           ))}
         </ul>
       </div>
-
-      {/* RIGHT — Server / Infrastructure visual */}
-      <aside className="relative">
-        <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-br from-primary/15 via-transparent to-accent/15 blur-2xl" />
-        <div className="relative overflow-hidden rounded-3xl border border-border bg-card shadow-lift">
-          <img
-            src={serverRoom}
-            alt="MEXAA-IT Rechenzentrum – moderne Cloud- und Server-Infrastruktur"
-            width={720}
-            height={560}
-            className="h-[420px] w-full object-cover md:h-[520px]"
-          />
-          <div className="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-background/90 px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.22em] text-foreground shadow-sm backdrop-blur">
-            <ShieldCheck className="h-3.5 w-3.5 text-primary" /> Hosting in Deutschland
-          </div>
-          <div className="absolute bottom-4 left-4 right-4 rounded-2xl border border-border/60 bg-background/85 p-4 backdrop-blur-md">
-            <div className="flex items-center justify-between gap-4">
-              <div>
-                <div className="text-[10px] font-black uppercase tracking-[0.22em] text-muted-foreground">Verfügbarkeit</div>
-                <div className="text-2xl font-black text-foreground">99,9 %</div>
-              </div>
-              <div className="h-10 w-px bg-border" />
-              <div>
-                <div className="text-[10px] font-black uppercase tracking-[0.22em] text-muted-foreground">Reaktion</div>
-                <div className="text-2xl font-black text-foreground">&lt; 2 h</div>
-              </div>
-              <div className="h-10 w-px bg-border" />
-              <div>
-                <div className="text-[10px] font-black uppercase tracking-[0.22em] text-muted-foreground">Standort</div>
-                <div className="text-2xl font-black text-foreground">DE</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </aside>
     </div>
   </section>
 );
