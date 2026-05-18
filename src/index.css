@@ -43,7 +43,7 @@ All colors MUST be HSL.
     --glass: 0 0% 100% / 0.12;
     --trust: 203 73% 38%;
     --footer: 216 67% 7%;
-    --section-title: 221 39% 11%;
+    --section-title: 210 40% 98%;
     --gradient-readable-hero: linear-gradient(to right, rgba(10,22,40,0.95) 0%, rgba(10,22,40,0.7) 60%, rgba(10,22,40,0.3) 100%);
     --gradient-hero-radial: radial-gradient(circle at 78% 22%, hsl(203 73% 38% / .45), transparent 34%), radial-gradient(circle at 22% 78%, hsl(190 90% 43% / .18), transparent 32%);
     --gradient-section-glow: linear-gradient(135deg, hsl(209 35% 98%), hsl(203 73% 38% / .08));
