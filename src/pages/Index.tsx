@@ -1,11 +1,10 @@
-import { ArrowRight, ArrowUpRight, BadgeCheck, CheckCircle2, Cloud, Mail, MonitorCheck, Phone, ShieldCheck, Star, Wrench } from "lucide-react";
+import { ArrowRight, ArrowUpRight, BadgeCheck, CheckCircle2, Cloud, Mail, MonitorCheck, Phone, Sparkles, Wrench } from "lucide-react";
 import { Link } from "react-router-dom";
 import drDinger from "@/assets/dr-helmut-dinger.avif";
-import serverRoom from "@/assets/mexaa-server-room.jpg";
-import cardCloud from "@/assets/card-cloud.jpg";
-import cardInfra from "@/assets/card-infra.jpg";
-import cardWorkplace from "@/assets/card-workplace.jpg";
 import { Footer, Navigation } from "@/components/MexaaLayout";
+import { FaqSection, ReasonsForMexaa, WhyMexaa } from "@/components/MexaaSections";
+import { PartnerMarquee } from "@/components/PartnerMarquee";
+import { itServices, serviceIcons, solutions } from "@/components/mexaaData";
 import { FaqSection, ReasonsForMexaa, WhyMexaa } from "@/components/MexaaSections";
 import { PartnerMarquee } from "@/components/PartnerMarquee";
 import { itServices, serviceIcons, solutions } from "@/components/mexaaData";
