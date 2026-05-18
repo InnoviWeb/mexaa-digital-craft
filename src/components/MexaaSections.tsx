@@ -17,22 +17,19 @@ const reasons = [
 
 export const WhyMexaa = () => (
   <section className="relative overflow-hidden bg-background px-6 py-16 md:py-[100px]">
-    <div className="pointer-events-none absolute -left-32 top-1/3 h-96 w-96 rounded-full bg-primary/5 blur-3xl" />
-    <div className="pointer-events-none absolute -right-32 bottom-0 h-96 w-96 rounded-full bg-accent/10 blur-3xl" />
     <div className="relative mx-auto max-w-[1200px]">
       <div className="text-center">
-        <h2 className="text-[26px] sm:text-[32px] font-extrabold leading-tight text-section-title md:text-[44px]">Ihr IT-Partner für innovative<br className="hidden md:block" /> und wachsende Unternehmen</h2>
-        <p className="mx-auto mt-6 max-w-3xl text-base leading-7 text-muted-foreground md:text-lg md:leading-8">Unser Anspruch ist es, der beste IT-Dienstleister in Hessen zu werden. Höchste Qualität, Zuverlässigkeit und Kundenorientierung – damit komplexe Projekte erfolgreich werden.</p>
+        <h2 className="text-[28px] sm:text-[34px] font-extrabold leading-tight tracking-[-0.02em] text-section-title md:text-[46px]">Ihr IT-Partner für innovative<br className="hidden md:block" /> und wachsende Unternehmen</h2>
+        <p className="mx-auto mt-6 max-w-3xl text-[15.5px] leading-8 text-muted-foreground md:text-[16.5px]">Unser Anspruch ist es, der beste IT-Dienstleister in Hessen zu werden. Höchste Qualität, Zuverlässigkeit und Kundenorientierung – damit komplexe Projekte erfolgreich werden.</p>
       </div>
-      <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-        {advantages.map(({ icon: Icon, title, text }, i) => (
-          <article key={title} className="group relative rounded-2xl border border-border bg-card p-7 pt-10 shadow-sm transition hover:-translate-y-2 hover:border-primary/40 hover:shadow-lift">
-            <div className="absolute -top-6 left-7 grid h-12 w-12 place-items-center rounded-xl bg-gradient-to-br from-primary to-accent text-primary-foreground shadow-glow">
-              <Icon className="h-6 w-6" />
+      <div className="mt-14 grid gap-7 sm:grid-cols-2 lg:grid-cols-4">
+        {advantages.map(({ icon: Icon, title, text }) => (
+          <article key={title} className="group rounded-2xl border border-border bg-card p-7 transition hover:shadow-lift">
+            <div className="mb-5 grid h-12 w-12 place-items-center rounded-xl bg-primary/10 text-primary">
+              <Icon className="h-5 w-5" strokeWidth={1.6} />
             </div>
-            <div className="absolute right-5 top-5 text-xs font-black tabular-nums text-primary/30">0{i + 1}</div>
-            <h3 className="mt-2 text-base font-black leading-snug text-foreground">{title}</h3>
-            <p className="mt-3 text-sm leading-6 text-muted-foreground">{text}</p>
+            <h3 className="text-[15px] font-extrabold leading-snug text-foreground">{title}</h3>
+            <p className="mt-3 text-[13.5px] leading-7 text-muted-foreground">{text}</p>
           </article>
         ))}
       </div>
@@ -41,26 +38,20 @@ export const WhyMexaa = () => (
 );
 
 export const ReasonsForMexaa = () => (
-  <section className="relative overflow-hidden bg-hero px-6 py-16 md:py-[100px] text-hero-foreground">
-    <div className="pointer-events-none absolute inset-0 opacity-40" style={{ backgroundImage: "radial-gradient(circle at 20% 20%, hsl(var(--primary)/.4), transparent 40%), radial-gradient(circle at 80% 80%, hsl(var(--accent)/.25), transparent 40%)" }} />
+  <section className="relative overflow-hidden bg-secondary px-6 py-16 md:py-[100px]">
     <div className="relative mx-auto max-w-[1200px]">
       <div className="mx-auto max-w-3xl text-center">
-        <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-primary-foreground/20 bg-primary-foreground/10 px-4 py-1.5 text-xs font-black uppercase tracking-[0.22em] text-hero-foreground/80"><Award className="h-3.5 w-3.5 text-accent" /> Unsere Stärken</div>
-        <h2 className="text-[26px] sm:text-[32px] font-extrabold leading-tight md:text-[44px]">Gründe, die für MEXAA-IT als Dienstleister sprechen</h2>
+        <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.22em] text-primary"><Award className="h-3.5 w-3.5" /> Unsere Stärken</div>
+        <h2 className="text-[28px] sm:text-[34px] font-extrabold leading-tight tracking-[-0.02em] text-section-title md:text-[46px]">Gründe, die für MEXAA-IT als Dienstleister sprechen</h2>
       </div>
       <div className="mt-14 grid gap-6 md:grid-cols-2">
         {reasons.map((r) => (
-          <article key={r.title} className="group relative overflow-hidden rounded-2xl border border-primary-foreground/10 bg-primary-foreground/[0.04] p-8 backdrop-blur-sm transition hover:border-primary/40 hover:bg-primary-foreground/[0.07]">
-            <div className="flex items-start gap-6">
-              <div className="text-5xl font-black leading-none text-primary/60">{r.number}</div>
-              <div className="flex-1">
-                <div className="flex flex-wrap items-center gap-3">
-                  <h3 className="text-2xl font-black text-hero-foreground">{r.title}</h3>
-                  <span className="rounded-sm bg-primary/20 px-2 py-1 text-[10px] font-black tracking-[0.2em] text-accent">{r.badge}</span>
-                </div>
-                <p className="mt-3 text-sm leading-7 text-hero-foreground/75">{r.text}</p>
-              </div>
+          <article key={r.title} className="group rounded-2xl border border-border bg-card p-8 transition hover:shadow-lift">
+            <div className="flex flex-wrap items-center gap-3">
+              <h3 className="text-xl font-extrabold text-foreground md:text-2xl">{r.title}</h3>
+              <span className="rounded-full bg-primary/10 px-2.5 py-1 text-[10px] font-bold tracking-[0.18em] text-primary">{r.badge}</span>
             </div>
+            <p className="mt-4 text-[14px] leading-7 text-muted-foreground">{r.text}</p>
           </article>
         ))}
       </div>
@@ -76,38 +67,32 @@ const defaultFaqs: Array<{ q: string; a: string }> = [
 ];
 
 export const FaqSection = ({ faqs = defaultFaqs }: { faqs?: Array<{ q: string; a: string }> }) => (
-  <section className="bg-secondary px-6 py-16 md:py-[100px]">
+  <section className="bg-background px-6 py-16 md:py-[100px]">
     <div className="mx-auto max-w-[1200px]">
       <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
-        <aside className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-hero via-hero to-primary/40 p-8 text-hero-foreground shadow-lift md:p-10">
-          <div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-accent/20 blur-3xl" />
-          <div className="relative">
-            <div className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/20 bg-primary-foreground/10 px-3 py-1 text-[11px] font-black uppercase tracking-[0.22em]">FAQ</div>
-            <h2 className="mt-5 text-[32px] font-extrabold leading-tight md:text-[40px]">Fragen & Antworten</h2>
-            <p className="mt-5 text-sm leading-7 text-hero-foreground/75">Sie finden Ihre Antwort nicht? Schreiben Sie uns oder rufen Sie an – wir freuen uns auf Sie.</p>
-            <div className="mt-8 space-y-4">
-              {[[Phone, "+49 6101 596 90 82"], [Mail, "info@mexaa.de"], [MapPin, "Homburger Str. 69a, 61118 Bad Vilbel"]].map(([Icon, text]) => {
-                const Ico = Icon as typeof Phone;
-                return (
-                  <div key={text as string} className="flex items-center gap-4 text-sm font-semibold">
-                    <span className="grid h-10 w-10 place-items-center rounded-full bg-primary-foreground/10 backdrop-blur"><Ico className="h-4 w-4 text-accent" /></span>
-                    <span className="text-hero-foreground/90">{text as string}</span>
-                  </div>
-                );
-              })}
-            </div>
+        <aside className="rounded-2xl border border-border bg-secondary p-8 md:p-10">
+          <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-[11px] font-bold uppercase tracking-[0.22em] text-primary">FAQ</div>
+          <h2 className="mt-5 text-[30px] font-extrabold leading-tight tracking-[-0.02em] text-section-title md:text-[38px]">Fragen & Antworten</h2>
+          <p className="mt-5 text-[14px] leading-7 text-muted-foreground">Sie finden Ihre Antwort nicht? Schreiben Sie uns oder rufen Sie an – wir freuen uns auf Sie.</p>
+          <div className="mt-8 space-y-4">
+            {[[Phone, "+49 6101 596 90 82"], [Mail, "info@mexaa.de"], [MapPin, "Homburger Str. 69a, 61118 Bad Vilbel"]].map(([Icon, text]) => {
+              const Ico = Icon as typeof Phone;
+              return (
+                <div key={text as string} className="flex items-center gap-4 text-sm font-semibold">
+                  <span className="grid h-10 w-10 place-items-center rounded-full bg-primary/10"><Ico className="h-4 w-4 text-primary" strokeWidth={1.8} /></span>
+                  <span className="text-foreground">{text as string}</span>
+                </div>
+              );
+            })}
           </div>
         </aside>
         <Accordion type="single" collapsible defaultValue="item-0" className="space-y-3">
           {faqs.map((f, i) => (
-            <AccordionItem key={f.q} value={`item-${i}`} className="overflow-hidden rounded-2xl border border-border bg-background px-6 shadow-sm transition data-[state=open]:border-primary/40 data-[state=open]:shadow-lift">
-              <AccordionTrigger className="py-5 text-left hover:no-underline [&[data-state=open]_.faq-num]:bg-primary [&[data-state=open]_.faq-num]:text-primary-foreground">
-                <div className="flex items-center gap-4 pr-4">
-                  <span className="faq-num grid h-9 w-9 shrink-0 place-items-center rounded-full bg-secondary text-xs font-black tabular-nums text-foreground transition">{String(i + 1).padStart(2, "0")}</span>
-                  <span className="text-base font-bold leading-snug text-foreground">{f.q}</span>
-                </div>
+            <AccordionItem key={f.q} value={`item-${i}`} className="overflow-hidden rounded-2xl border border-border bg-card px-6 transition data-[state=open]:border-primary/40 data-[state=open]:shadow-lift">
+              <AccordionTrigger className="py-5 text-left hover:no-underline">
+                <span className="text-[15px] font-bold leading-snug text-foreground">{f.q}</span>
               </AccordionTrigger>
-              <AccordionContent className="pb-6 pl-[52px] text-sm leading-7 text-muted-foreground">{f.a}</AccordionContent>
+              <AccordionContent className="pb-6 text-[14px] leading-7 text-muted-foreground">{f.a}</AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>

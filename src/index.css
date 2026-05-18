@@ -10,47 +10,47 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 216 50% 6%;
-    --foreground: 210 40% 96%;
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
 
-    --card: 216 45% 9%;
-    --card-foreground: 210 40% 96%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
 
-    --popover: 216 45% 9%;
-    --popover-foreground: 210 40% 96%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
 
-    --primary: 199 90% 55%;
-    --primary-foreground: 216 60% 8%;
+    --primary: 203 73% 38%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 216 40% 12%;
-    --secondary-foreground: 210 40% 96%;
+    --secondary: 210 40% 98%;
+    --secondary-foreground: 222 47% 11%;
 
-    --muted: 216 35% 14%;
-    --muted-foreground: 214 20% 68%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
 
-    --accent: 190 90% 50%;
-    --accent-foreground: 216 60% 8%;
+    --accent: 203 73% 38%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 70% 50%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 216 30% 18%;
-    --input: 216 30% 18%;
-    --ring: 199 90% 55%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 203 73% 38%;
 
-    --hero: 216 60% 5%;
+    --hero: 222 47% 11%;
     --hero-foreground: 0 0% 100%;
     --glass: 0 0% 100% / 0.12;
     --trust: 203 73% 38%;
-    --footer: 216 67% 7%;
-    --section-title: 210 40% 98%;
+    --footer: 222 47% 8%;
+    --section-title: 222 47% 11%;
     --gradient-readable-hero: linear-gradient(to right, rgba(10,22,40,0.95) 0%, rgba(10,22,40,0.7) 60%, rgba(10,22,40,0.3) 100%);
-    --gradient-hero-radial: radial-gradient(circle at 78% 22%, hsl(203 73% 38% / .45), transparent 34%), radial-gradient(circle at 22% 78%, hsl(190 90% 43% / .18), transparent 32%);
-    --gradient-section-glow: linear-gradient(135deg, hsl(209 35% 98%), hsl(203 73% 38% / .08));
-    --shadow-glass: 0 24px 80px hsl(216 60% 4% / .34);
-    --shadow-lift: 0 30px 60px -20px hsl(216 60% 10% / .18);
-    --shadow-glow: 0 0 48px hsl(203 73% 38% / .34);
-    --shadow-soft: 0 1px 2px hsl(216 60% 10% / .04), 0 8px 24px -12px hsl(216 60% 10% / .12);
+    --gradient-hero-radial: radial-gradient(circle at 78% 22%, hsl(203 73% 38% / .25), transparent 50%);
+    --gradient-section-glow: linear-gradient(135deg, hsl(210 40% 98%), hsl(203 73% 38% / .05));
+    --shadow-glass: 0 24px 80px hsl(222 47% 11% / .12);
+    --shadow-lift: 0 20px 50px -20px hsl(222 47% 11% / .15);
+    --shadow-glow: 0 0 40px hsl(203 73% 38% / .18);
+    --shadow-soft: 0 1px 2px hsl(222 47% 11% / .04), 0 8px 24px -12px hsl(222 47% 11% / .08);
 
     --radius: 0.875rem;
 
