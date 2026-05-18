@@ -25,12 +25,11 @@ const Hero = () => (
       <img
         src={serverRoom}
         alt="MEXAA-IT Rechenzentrum – moderne Cloud- und Server-Infrastruktur"
-        className="h-full w-full object-cover"
+        className="h-full w-full object-cover opacity-70"
       />
-      {/* Overlays for readability */}
-      <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/85 to-background/40" />
-      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
-      <div className="absolute inset-x-0 top-0 h-[520px] bg-[radial-gradient(ellipse_at_top_left,hsl(var(--primary)/0.15),transparent_55%)]" />
+      {/* Dark overlays for readability */}
+      <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-background/30" />
+      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
     </div>
 
     <div className="mx-auto max-w-[1240px] px-6 pb-24 pt-6 md:pb-32 md:pt-12">
