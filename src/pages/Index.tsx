@@ -5,9 +5,6 @@ import { Footer, Navigation } from "@/components/MexaaLayout";
 import { FaqSection, ReasonsForMexaa, WhyMexaa } from "@/components/MexaaSections";
 import { PartnerMarquee } from "@/components/PartnerMarquee";
 import { itServices, serviceIcons, solutions } from "@/components/mexaaData";
-import { FaqSection, ReasonsForMexaa, WhyMexaa } from "@/components/MexaaSections";
-import { PartnerMarquee } from "@/components/PartnerMarquee";
-import { itServices, serviceIcons, solutions } from "@/components/mexaaData";
 
 /* ---------- Hero (Split-Grid, Corporate Trust) ---------- */
 const trustBullets = [
